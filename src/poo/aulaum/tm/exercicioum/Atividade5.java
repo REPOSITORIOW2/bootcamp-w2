@@ -1,4 +1,4 @@
-package java.aula1.tm.exercicio1;
+package poo.aulaum.tm.exercicioum;
 
 //Desenvolver um programa para exibição por console os n primeiros números naturais
 // que têm pelo menos de m dígitos de d, sendo n, m e d valores que o utilizador vai enviar pelo console.

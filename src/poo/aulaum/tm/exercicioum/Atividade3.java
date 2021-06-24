@@ -1,4 +1,4 @@
-package java.aula1.tm.exercicio1;
+package poo.aulaum.tm.exercicioum;
 
 /*Desenvolva um programa para informar se um um número n é
 primo ou não, sendo n um valor que o usuário irá inserir pelo console.

@@ -1,4 +1,4 @@
-package java.aula1.tm.exercicio1;
+package poo.aulaum.tm.exercicioum;
 
 import java.util.ArrayList;
 import java.util.Scanner;
