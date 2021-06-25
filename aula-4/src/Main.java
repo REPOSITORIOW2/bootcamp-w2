@@ -26,12 +26,19 @@ public class Main {
         List<Estudante> estudantes = new ArrayList<Estudante>();
         
         for(int i = 0; i < 5; i++){
-            Estudante estudante = new Estudante("Estudante", new Random().nextInt(15), i);
+            Estudante estudante = new Estudante("Estudante", new Random().nextInt( 6 )+10, i);
             estudantes.add(estudante);
         }
 
         Turma turma = new Turma(8, "C", disciplinas, estudantes);
+        System.out.println();
+        System.out.println("---------- Relatorio de turmas ---------");
         System.out.println(turma);
         
     }
+    
 }
+
+
+
+
