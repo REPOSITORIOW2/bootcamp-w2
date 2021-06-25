@@ -24,5 +24,11 @@ public class Main {
         fracao4.multiplicar(4);
         System.out.println(fracao4);
 
+        Fracao fracao5 = new Fracao(4, 10);
+        Fracao fracao6 = new Fracao(5, 8);
+
+        fracao5.adicionar(5);
+        System.out.println(fracao5);
+
     }
 }

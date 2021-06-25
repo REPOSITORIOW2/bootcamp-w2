@@ -13,6 +13,11 @@ public class Fracao {
         this.denominador = denominador;
     }
 
+    public Fracao(Fracao segundaFracao){
+        this.numerador = segundaFracao.getNumerador();
+        this.denominador = segundaFracao.getDenominador();
+    }
+
     public int getNumerador() {
         return numerador;
     }
@@ -30,25 +35,39 @@ public class Fracao {
     }
 
     public void adicionar(Fracao segundaFracao){
+
         if (this.denominador != segundaFracao.getDenominador()){
-            this.denominador *= segundaFracao.getDenominador();
+            Fracao copiaSegunda = new Fracao(segundaFracao);
+            int denominadorComum = this.denominador * copiaSegunda.denominador;
+            this.numerador = denominadorComum / this.denominador * this.numerador;
+            copiaSegunda.setNumerador(denominadorComum / copiaSegunda.getDenominador() * copiaSegunda.getNumerador());
+            this.denominador = denominadorComum;
+            this.numerador += copiaSegunda.getNumerador();
+        }else{
+            this.numerador += segundaFracao.getNumerador();
         }
-        this.numerador += segundaFracao.getNumerador();
     }
 
     public void adicionar(int numeroInteiro){
-        this.numerador += numeroInteiro;
+        Fracao fracaoComUm = new Fracao(numeroInteiro, 1);
+        adicionar(fracaoComUm);
     }
 
     public void subtrair(Fracao segundaFracao){
         if (this.denominador != segundaFracao.getDenominador()){
-            this.denominador *= segundaFracao.getDenominador();
+            Fracao copiaSegunda = new Fracao(segundaFracao);
+            int denominadorComum = this.denominador * copiaSegunda.denominador;
+            this.numerador = denominadorComum / this.denominador * this.numerador;
+            copiaSegunda.setNumerador(denominadorComum / copiaSegunda.getDenominador() * copiaSegunda.getNumerador());
+            this.denominador = denominadorComum;
+            this.numerador -= copiaSegunda.getNumerador();
         }
         this.numerador -= segundaFracao.getNumerador();
     }
 
     public void subtrair(int numeroInteiro){
-        this.numerador -= numeroInteiro;
+        Fracao fracaoComUm = new Fracao(numeroInteiro, 1);
+        subtrair(fracaoComUm);
     }
 
     public void multiplicar(Fracao segundaFracao){
