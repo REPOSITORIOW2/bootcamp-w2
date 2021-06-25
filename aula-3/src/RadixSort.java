@@ -35,7 +35,6 @@ public class RadixSort {
     }
 
     public static void radixSort(int[] arr) {
-        int n = arr.length;
         String[] arrStr = addPaddingDigits(arr);;
         int maxDigits = getMaxDigits(arr);
         
