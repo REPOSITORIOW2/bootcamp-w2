@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d32f7d8-f2ec-468b-baaf-4dbdd4bc97b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/Giovanna.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aula3Ex1/Aula3Ex1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aula3Ex2/Aula3Ex2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aula4Ex1/Aula4Ex1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/project-template.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Aula4Ex2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/melibootcamp/ContaCorrente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/melibootcamp/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/untitled104.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/melibootcamp/Counter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +117,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1624633500734</updated>
-      <workItem from="1624633502181" duration="1260000" />
+      <workItem from="1624633502181" duration="1505000" />
     </task>
     <servers />
   </component>
