@@ -13,8 +13,10 @@ public class Senha {
     public void setValue(String pwd) throws Exception {
 
         if(!pwd.matches(regex)){
-            throw new Exception(" Senha fora do padrão"); 
+            throw new Exception("[EXCEPTION] Senha fora do padrão!");
         }
+
+        System.out.println("Senha registrada com sucesso!");
 
     }
 
