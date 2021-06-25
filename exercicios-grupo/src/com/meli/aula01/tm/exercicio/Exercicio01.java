@@ -1,4 +1,4 @@
-package com.meli.aula01.tt.exercicio;
+package com.meli.aula01.tm.exercicio;
 import java.util.Scanner;
 
 
