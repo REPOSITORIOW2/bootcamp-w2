@@ -14,7 +14,7 @@ package application;
 import entities.Book;
 
 public class Main {
-    public static void main(String[] args){
+    public static void teste(String[] args){
         Book bk1 = new Book();
         Book bk2 = new Book("Harry Potter", "9923371283", "J.K. Rowling");
 
