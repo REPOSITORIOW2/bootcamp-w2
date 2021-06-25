@@ -31,6 +31,7 @@ public class Main {
         }
 
         Turma turma = new Turma(8, "C", disciplinas, estudantes);
+        System.out.println(turma);
         
     }
     
