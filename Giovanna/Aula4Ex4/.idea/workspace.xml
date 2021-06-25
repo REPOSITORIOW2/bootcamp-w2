@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2952a8fd-6e42-4db4-a0ce-7376952b5927" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/project-template.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Aula4Ex4.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/melibootcamp/EnumTipoFuncionario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/melibootcamp/Funcionario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/melibootcamp/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aula3Ex3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Aula3Ex3/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2952a8fd-6e42-4db4-a0ce-7376952b5927" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,7 +120,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1624650719498</updated>
-      <workItem from="1624650720842" duration="1977000" />
+      <workItem from="1624650720842" duration="2208000" />
     </task>
     <servers />
   </component>
