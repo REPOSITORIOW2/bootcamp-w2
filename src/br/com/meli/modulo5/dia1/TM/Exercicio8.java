@@ -1,4 +1,4 @@
-package br.com.meli.modulo5.dia1;
+package br.com.meli.modulo5.dia1.TM;
 
 import java.util.Scanner;
 public class Exercicio8 {
