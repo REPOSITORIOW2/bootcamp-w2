@@ -37,21 +37,27 @@ public class RadixSort {
     public static void radixSort(int[] arr) {
         int n = arr.length;
         String[] arrStr = addPaddingDigits(arr);;
-        List<List<String>> listas = new ArrayList<List<String>>();
         int maxDigits = getMaxDigits(arr);
-
-        for (int i = 0; i < 10; i++) {
-            listas.add(new ArrayList<String>());
-        }
-
+        
+        
         // Iterar para cada posicao dos digitos em arrStr
         for (int i = 0; i < maxDigits; i++) {
+            // reset lists
+            List<List<String>> listas = new ArrayList<List<String>>();
+            for (int j = 0; j < 10; j++) {
+                listas.add(new ArrayList<String>());
+            }
+            // get current index
             int index = maxDigits - i - 1;
+
+            // add number strings to correspondent lists
             for (String s: arrStr) {
                 int digit = Integer.parseInt(s.charAt(index) + "");
                 listas.get(digit).add(s);
             }
+
             int j = 0;
+
             for (List<String> lista: listas) {
                 for (String s: lista) {
                     arrStr[j++] = s;
@@ -60,7 +66,7 @@ public class RadixSort {
         }
 
         for (int i = 0; i < arrStr.length; i++) {
-            System.out.println(arrStr[i]);
+            arr[i] = Integer.parseInt(arrStr[i]);
         }
     }
 
@@ -70,7 +76,7 @@ public class RadixSort {
         radixSort(iArr);
 
         for (int i: iArr) {
-           // System.out.println(i);
+           System.out.println(i);
         }
     }
 }
