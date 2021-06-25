@@ -44,10 +44,10 @@ public class Turma {
     public String toString() {
         String output = "";
         output += "Turma: " + getId() + getSerie();
-        output += "\nLista de disciplinas: ";
+        output += "\nLista de disciplinas: \n";
         for (Disciplina d : getDisciplinas())
             output += d.toString();
-        output += "\nLista de alunos: ";
+        output += "\nLista de alunos: \n";
         for (Estudante e : getEstudantes())
             output += e.toString();
         return output;
