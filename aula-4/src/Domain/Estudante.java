@@ -4,9 +4,12 @@ public class Estudante {
     private String nome;
     private int idade;
     private int matricula;
-    private int serie;
 
-    public Estudante() {
+
+    public Estudante(String nome, int idade, int matricula) {
+        this.nome = nome;
+        this.idade = idade;
+        this.matricula = matricula;
     }
 
     public String getNome() {
@@ -33,11 +36,5 @@ public class Estudante {
         this.matricula = matricula;
     }
 
-    public int getSerie() {
-        return serie;
-    }
-
-    public void setSerie(int serie) {
-        this.serie = serie;
-    }
+    
 }
