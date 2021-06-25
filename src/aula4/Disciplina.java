@@ -24,4 +24,9 @@ public class Disciplina {
     public void setCargaHoraria(Double cargaHoraria) {
         this.cargaHoraria = cargaHoraria;
     }
+
+    @Override
+    public String toString() {
+        return nome;
+    }
 }

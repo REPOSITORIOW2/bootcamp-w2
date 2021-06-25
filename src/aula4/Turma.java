@@ -1,5 +1,7 @@
 package aula4;
 
+import java.util.Arrays;
+
 public class Turma {
     private String serie;
     private Character codigoID;
@@ -43,5 +45,15 @@ public class Turma {
 
     public void setDisciplinas(Disciplina[] disciplinas) {
         this.disciplinas = disciplinas;
+    }
+
+    @Override
+    public String toString() {
+        return "Turma{" +
+                "serie='" + serie + '\'' +
+                ", codigoID=" + codigoID +
+                ", estudantes=" + Arrays.toString(estudantes) +
+                ", disciplinas=" + Arrays.toString(disciplinas) +
+                '}';
     }
 }

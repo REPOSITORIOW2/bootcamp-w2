@@ -44,4 +44,9 @@ public class Estudante {
     public void setSerie(String serie) {
         this.serie = serie;
     }
+
+    @Override
+    public String toString() {
+        return nome;
+    }
 }
