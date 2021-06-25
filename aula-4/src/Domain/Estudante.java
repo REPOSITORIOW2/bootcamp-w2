@@ -36,5 +36,10 @@ public class Estudante {
         this.matricula = matricula;
     }
 
+    @Override
+    public String toString() {
+        return "Estudante: " + getNome() + "\nIdade: " + getIdade() + "\nMatricula: " + getMatricula() + "\n";
+    }
+
     
 }
