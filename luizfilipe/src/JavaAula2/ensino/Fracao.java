@@ -30,6 +30,10 @@ public class Fracao {
         this.denominador *= addFrac.getDenominador();
     }
 
+    public void soma(int valor) {
+        this.numerador = this.numerador + valor * this.denominador;
+    }
+
     public void multiplicacao(Fracao addFrac) {
         this.numerador *= addFrac.getNumerador();
         this.denominador *= addFrac.getDenominador();
