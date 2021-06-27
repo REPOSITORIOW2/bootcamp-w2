@@ -3,9 +3,9 @@ package JavaAula2.ensino;
 import java.util.GregorianCalendar;
 
 public class Data {
-    int dia;
-    int mes;
-    int ano;
+    private int dia;
+    private int mes;
+    private int ano;
 
     public Data(int dia, int mes, int ano) {
         this.dia = dia;

@@ -6,8 +6,8 @@ public class Fracao {
         this.denominador = denominador;
     }
 
-    int numerador;
-    int denominador;
+    private int numerador;
+    private int denominador;
 
     public int getNumerador() {
         return numerador;
