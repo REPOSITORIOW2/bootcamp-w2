@@ -1,4 +1,4 @@
-package Banco;
+package tarde;
 
 public class Fracao {
     public void adicionar(int numerador1, int denominador1, int numerador2, int denominador2){

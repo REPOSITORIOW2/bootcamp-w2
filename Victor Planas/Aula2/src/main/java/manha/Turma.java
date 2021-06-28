@@ -1,7 +1,4 @@
-package Escola;
-
-import Escola.Disciplina;
-import Escola.Estudante;
+package manha;
 
 import java.util.List;
 

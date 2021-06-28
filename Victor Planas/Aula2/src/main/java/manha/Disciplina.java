@@ -1,4 +1,4 @@
-package Escola;
+package manha;
 
 public class Disciplina {
     String nome;
