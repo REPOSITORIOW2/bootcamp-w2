@@ -1,6 +1,5 @@
 package src;
 
-import java.util.Collection;
 import java.util.Comparator;
 
 public class QuickSortSorterImple<T> implements Sorter<T> {
