@@ -10,13 +10,13 @@ public class QuickSorterImple implements Sorter<Integer> {
     //public void sort(Object[] arr, Comparator c) {
     //}
 
-    private int[] numbers;
+    private Integer[] numbers;
     private int number;
 
     @Override
-    public void sort(Integer[] x, Comparator c) {
+    public void sort(Integer[] values, Comparator c) {
 
-        int[] values = Arrays.stream(x).mapToInt(Integer::intValue).toArray();
+
         if (values ==null || values.length==0){
             return;
         }

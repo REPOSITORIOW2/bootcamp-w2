@@ -25,7 +25,7 @@ public class Teste {
             }
         };
 
-        Integer[] b = generateArray(5);
+        Integer[] b = generateArray(5000000);
 
         assert a != null;
         Arrays.stream(b).forEach(System.out::print);
@@ -34,7 +34,7 @@ public class Teste {
         tempo.start();
         a.sort(b, c);
         tempo.stop();
-        tempo.elapsedTime();
+
 
         System.out.println("\n\n");
         Arrays.stream(b).forEach(System.out::print);

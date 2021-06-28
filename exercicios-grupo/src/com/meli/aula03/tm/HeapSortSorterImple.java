@@ -7,8 +7,8 @@ public class HeapSortSorterImple implements Sorter<Integer>{
 
 
     @Override
-    public void sort(Integer[] x, Comparator c) {
-        int[] arr = Arrays.stream(x).mapToInt(Integer::intValue).toArray();
+    public void sort(Integer[] arr, Comparator c) {
+
 
         int n = arr.length;
 
@@ -30,7 +30,7 @@ public class HeapSortSorterImple implements Sorter<Integer>{
 
     // To heapify a subtree rooted with node i which is
     // an index in arr[]. n is size of heap
-    void heapify(int[] arr, int n, int i) {
+    void heapify(Integer[] arr, int n, int i) {
         int largest = i; // Initialize largest as root
         int l = 2 * i + 1; // left = 2*i + 1
         int r = 2 * i + 2; // right = 2*i + 2
