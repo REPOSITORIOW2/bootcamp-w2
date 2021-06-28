@@ -11,6 +11,6 @@ public class Time {
     }
 
     public long elapsedTime() {
-        return this.start - this.stop;
+        return this.stop - this.start;
     }
 }
