@@ -12,5 +12,7 @@ public class Timer {
         this.fim = System.currentTimeMillis();
     }
 
-
+    public long elapsedTime() {
+        return this.fim - this.inicio;
+    }
 }
