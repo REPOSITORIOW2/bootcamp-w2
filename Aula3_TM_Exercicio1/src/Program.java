@@ -1,13 +1,8 @@
 import java.io.*;
 import java.util.*;
 
-public class Aula3TM_Exercicio1 {
+public class Program {
     public static void main(String[] args) {
-//        String[] arrayOfStrings = {"Andree", "Leana", "Faviola", "Loyce", "Quincy", "Milo", "Jamila", "Toccara", "Nelda", "Blair", "Ernestine", "Chara", "Kareen", "Monty", "Rene", "Cami", "Winifred", "Tara", "Demetrice", "Azucena"};
-//        Double[] arrayOfDoubles = {0.35, 0.02, 0.36, 0.82, 0.27, 0.49, 0.41, 0.17, 0.30, 0.89, 0.37, 0.66, 0.82, 0.17, 0.20, 0.96, 0.18, 0.25, 0.37, 0.52};
-
-        readFile();
-
         try {
             Time timer = new Time();
 
@@ -15,8 +10,7 @@ public class Aula3TM_Exercicio1 {
 
             System.out.println("Classe de ordenacao: " + sorter.getClass());
 
-            List<Integer> testList = readFile();
-            Integer[] testArray = testList.toArray(new Integer[testList.size()]);
+            Integer[] testArray = readFile();
 
             System.out.println("Antes da ordenacao: " + Arrays.toString(testArray));
 
@@ -34,12 +28,13 @@ public class Aula3TM_Exercicio1 {
         }
     }
 
-    private static List<Integer> readFile() {
+    private static Integer[] readFile() {
         List<Integer> integers = new ArrayList<>();
+        Scanner scanner = null;
 
         try {
             File file = new File("src/numbers.txt");
-            Scanner scanner = new Scanner(file);
+            scanner = new Scanner(file);
 
             while (scanner.hasNext()) {
                 String[] line = scanner.nextLine().split(",");
@@ -48,9 +43,11 @@ public class Aula3TM_Exercicio1 {
                     integers.add(Integer.parseInt(num));
             }
         } catch (FileNotFoundException err) {
-            System.out.println("Erro: " + err.getMessage());
+            System.out.println("Erro ao ler arquivo: " + err.getMessage());
+        } finally {
+            scanner.close();
         }
 
-        return integers;
+        return integers.toArray(new Integer[integers.size()]);
     }
 }
