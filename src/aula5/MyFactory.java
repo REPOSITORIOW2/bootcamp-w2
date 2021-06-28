@@ -17,9 +17,18 @@ public class MyFactory {
             // get the property value and print it out
             String propertie = prop.getProperty("sorter");
 
-            return Class.forName(propertie);
+            Class sortClass = Class.forName(propertie);
+            Object obj = sortClass.newInstance();
+
+            return obj;
         } catch (IOException | ClassNotFoundException ex) {
             ex.printStackTrace();
+            return null;
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+            return null;
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
             return null;
         }
     }
