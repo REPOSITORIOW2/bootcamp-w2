@@ -56,8 +56,4 @@ public class HeapSortSorterImple<T> implements Sorter<T>{
     private static int getRight(int i) {
         return (i * 2 + 1);
     }
-
-    private static int getParent(int i) {
-        return (int) Math.floor((i / 2)) - 1;
-    }
 }

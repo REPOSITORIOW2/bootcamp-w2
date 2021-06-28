@@ -31,14 +31,11 @@ public class TestSorting {
         };
 
         // performance tests
-        System.out.println("Quicksort com " + n + " elementos");
-        QuickSortSorterImple qs = new QuickSortSorterImple();
+        Sorter sorter = (Sorter) MyFactory.getInstance("");
         start = System.currentTimeMillis();
-        qs.sort(arr, c);
+        sorter.sort(arr, c);
         end = System.currentTimeMillis();
         elapsedTimeSeconds(start, end);
-
-        System.out.println("Bubblesort com " + n + " elementos");
 
         arr = generateArray(n);
 
@@ -46,9 +43,9 @@ public class TestSorting {
 
         s.sort(arr,c);
 
-        for (Integer i: arr) {
-            System.out.println(i);
-        }
+//        for (Integer i: arr) {
+//            System.out.println(i);
+//        }
 
     }
 }
