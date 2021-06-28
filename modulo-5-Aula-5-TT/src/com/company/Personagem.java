@@ -1,12 +1,12 @@
 package com.company;
 
 public class Personagem {
-    private String classe;
+    private Classes classe;
     private String nome;
     private int nivel;
     private Arma slot;
 
-    public Personagem(String classe, String nome, int nivel, Arma slot) {
+    public Personagem(Classes classe, String nome, int nivel, Arma slot) {
         this.classe = classe;
         this.nome = nome;
         this.nivel = nivel;
@@ -14,7 +14,7 @@ public class Personagem {
     }
 
     public String usarHabilidade(){
-        return "O personagem " + this.nome + " usou a habilidade: " + slot.getHabilidade();
+        return "O personagem " + this.nome + " da classe " + this.classe + " usou a habilidade: " + slot.getHabilidade();
     }
 
     public void setSlot(Arma slot) {
