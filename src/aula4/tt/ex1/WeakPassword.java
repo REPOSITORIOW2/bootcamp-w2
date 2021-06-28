@@ -1,6 +1,4 @@
-package aula4.tt;
-
-import java.util.regex.Pattern;
+package aula4.tt.ex1;
 
 public class WeakPassword extends Password {
     public WeakPassword() throws Exception {

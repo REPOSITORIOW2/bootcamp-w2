@@ -1,4 +1,4 @@
-package aula4.tt;
+package aula4.tt.ex1;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
