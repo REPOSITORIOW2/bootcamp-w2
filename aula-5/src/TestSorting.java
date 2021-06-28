@@ -37,6 +37,5 @@ public class TestSorting {
         qs.sort(arr, c);
         end = System.currentTimeMillis();
         elapsedTimeSeconds(start, end);
-
     }
 }
