@@ -1,3 +1,5 @@
+package senha;
+
 public class PasswordForte extends Senha{
     public PasswordForte() {
 //        super("^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])[0-9a-zA-Z$*&@#]{8,}$");

@@ -1,3 +1,5 @@
+package senha;
+
 public class PasswordFraca extends Senha{
     public PasswordFraca() {
         // Senhas com no mínimo 5 números

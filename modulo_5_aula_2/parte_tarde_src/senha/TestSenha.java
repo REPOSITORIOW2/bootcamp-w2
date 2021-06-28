@@ -1,3 +1,5 @@
+package senha;
+
 public class TestSenha {
     public static void main(String[] args) {
         String forte = "CD!12asd";

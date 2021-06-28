@@ -1,4 +1,4 @@
-/*
+package senha;/*
 Crie uma classe de senha. O construtor deve receber uma regex (expressão regular)
 que valida o formato exigido para a senha.
 Pesquise na Internet quais recursos Java fornece para operar com expressões regulares.
@@ -31,7 +31,7 @@ public class Senha {
             throw new Exception("A senha nao obedece o padrao");
         }
         this.pwd = pwd;
-        System.out.println("Senha valida!");
+        System.out.println("senha.Senha valida!");
     }
 
     public String getRegex(){

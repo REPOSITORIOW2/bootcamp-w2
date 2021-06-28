@@ -1,3 +1,5 @@
+package senha;
+
 public class PasswordMedia extends Senha{
 
     public PasswordMedia(){
