@@ -5,7 +5,6 @@ import java.util.Comparator;
 
 public class HeapSortSorterImple implements Sorter<Integer>{
 
-
     @Override
     public void sort(Integer[] arr, Comparator c) {
 
