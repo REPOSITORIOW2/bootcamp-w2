@@ -37,5 +37,18 @@ public class TestSorting {
         qs.sort(arr, c);
         end = System.currentTimeMillis();
         elapsedTimeSeconds(start, end);
+
+        System.out.println("Bubblesort com " + n + " elementos");
+
+        arr = generateArray(n);
+
+        Sorter s = new BubbleSortSorterImple();
+
+        s.sort(arr,c);
+
+        for (Integer i: arr) {
+            System.out.println(i);
+        }
+
     }
 }
