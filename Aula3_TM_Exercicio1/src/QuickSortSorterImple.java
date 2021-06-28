@@ -2,7 +2,7 @@ import java.util.Comparator;
 
 public class QuickSortSorterImple<T> implements Sorter<T> {
     @Override
-    public void sort(T arr[], Comparator<T> c) {
+    public void sort(T[] arr, Comparator<T> c) {
         quicksort(arr, 0, arr.length - 1, c);
     }
 

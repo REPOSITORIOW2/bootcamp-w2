@@ -1,5 +1,3 @@
-import java.util.Date;
-
 public class Time {
     private long startTime;
     private long endTime;

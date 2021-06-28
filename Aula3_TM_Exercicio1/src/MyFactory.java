@@ -23,8 +23,8 @@ public class MyFactory {
             err.printStackTrace();
         } finally {
             inputStream.close();
-
-            return objectResult;
         }
+
+        return objectResult;
     }
 }

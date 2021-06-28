@@ -48,6 +48,6 @@ public class Program {
             scanner.close();
         }
 
-        return integers.toArray(new Integer[integers.size()]);
+        return integers.stream().mapToInt(Integer::intValue).boxed().toArray(Integer[]::new);
     }
 }

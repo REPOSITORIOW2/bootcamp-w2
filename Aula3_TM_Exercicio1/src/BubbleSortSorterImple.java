@@ -2,7 +2,7 @@ import java.util.Comparator;
 
 public class BubbleSortSorterImple<T> implements Sorter<T> {
     @Override
-    public void sort(T arr[], Comparator<T> c) {
+    public void sort(T[] arr, Comparator<T> c) {
         bubbleSort(arr, c);
     }
 
