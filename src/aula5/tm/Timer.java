@@ -1,4 +1,4 @@
-package aula5;
+package aula5.tm;
 
 public class Timer {
     private long inicio;

@@ -1,4 +1,4 @@
-package aula5;
+package aula5.tm;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -33,7 +33,7 @@ public class Program {
 
         // teste da implementação com a matriz
         gerarMatriz("src/aula5/input.txt");
-        Integer[] valores = lerMatriz("src/aula5/input.txt");
+        Integer[] valores = lerMatriz("src/aula5/tm/input.txt");
 
         Sorter<Integer> matriz = (Sorter<Integer>) MyFactory.getInstance("Teste");
 

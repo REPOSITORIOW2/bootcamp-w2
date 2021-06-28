@@ -1,4 +1,4 @@
-package aula5;
+package aula5.tm;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class MyFactory {
     public static Object getInstance (String objName) {
-        try (InputStream input = new FileInputStream("src/aula5/MyFactory.properties")) {
+        try (InputStream input = new FileInputStream("src/aula5/tm/MyFactory.properties")) {
 
             Properties prop = new Properties();
 
