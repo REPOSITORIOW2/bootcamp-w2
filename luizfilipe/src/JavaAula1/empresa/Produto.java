@@ -1,4 +1,4 @@
-package JavaAula1.Empresa;
+package JavaAula1.empresa;
 
 public class Produto {
     private String nome;

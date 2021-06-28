@@ -1,0 +1,35 @@
+package com.melibootcamp;
+
+public class Triangulo extends GeometricFigure {
+    private double altura;
+    private double base;
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public double getBase() {
+        return base;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+
+    public void setBase(double base) {
+        this.base = base;
+    }
+
+    @Override
+    public double area() {
+        setArea((altura *base)/2);
+        return getArea();
+    }
+
+    public Triangulo(double altura, double base) {
+        this.altura = altura;
+        this.base = base;
+        area();
+
+    }
+}

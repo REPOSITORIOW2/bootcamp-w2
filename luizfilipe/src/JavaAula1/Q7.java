@@ -1,7 +1,7 @@
 package JavaAula1;
 import java.util.Scanner;
 
-import JavaAula1.Empresa.Empresa;
+import JavaAula1.empresa.Empresa;
 
 public class Q7{
     public static void main(String[] args) {
