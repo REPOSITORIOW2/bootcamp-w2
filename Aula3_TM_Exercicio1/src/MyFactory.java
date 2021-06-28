@@ -5,32 +5,26 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Properties;
 
 public class MyFactory {
-    public static Object getInstance(String objName) {
+    public static Object getInstance(String objName) throws IOException {
+        InputStream inputStream = null;
+        Object objectResult = null;
+
         try {
             Properties prop = new Properties();
-            InputStream is = new FileInputStream("/MyFactory.properties");
+            inputStream = new FileInputStream("src/MyFactory.properties");
 
-            prop.load(is);
+            prop.load(inputStream);
 
             String sortType = prop.getProperty("sorter");
             Class sortClass = Class.forName(sortType);
 
-            return sortClass.getDeclaredConstructor().newInstance();
-        } catch (IOException | ClassNotFoundException err) {
+            objectResult = sortClass.getDeclaredConstructor().newInstance();
+        } catch (IOException | ClassNotFoundException | IllegalAccessException | InstantiationException | NoSuchMethodException | InvocationTargetException err) {
             err.printStackTrace();
-            return null;
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-            return null;
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-            return null;
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-            return null;
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-            return null;
+        } finally {
+            inputStream.close();
+
+            return objectResult;
         }
     }
 }
