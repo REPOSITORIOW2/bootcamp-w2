@@ -1,4 +1,4 @@
-package br.com.meli.modulo5.dia2;
+package br.com.meli.modulo5.dia2.TM;
 
 public class Main {
 
