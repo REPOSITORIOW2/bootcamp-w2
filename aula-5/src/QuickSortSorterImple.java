@@ -1,3 +1,4 @@
+import java.util.Collection;
 import java.util.Comparator;
 
 import org.graalvm.compiler.asm.sparc.SPARCAssembler.CMOV;
@@ -20,8 +21,10 @@ public class QuickSortSorterImple implements Sorter<T> {
         T pivo = arr[inicio];
         int i = inicio + 1, f = fim;
         while (i <= f) {
-               if (arr[i] <= pivo)
-                      i++;
+               if (arr[i] <= pivo){
+                   i++;
+                   Collection.sort(arr, c);
+               }
                else if (pivo < arr[f])
                       f--;
                else {
