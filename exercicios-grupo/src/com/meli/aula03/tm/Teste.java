@@ -37,8 +37,8 @@ public class Teste {
         tempo.elapsedTime();
 
         System.out.println("\n\n");
-
         Arrays.stream(b).forEach(System.out::print);
+        System.out.println("\n" + "Tempo de execução: " + tempo.elapsedTime()+ "s \n");
 
     }
 }
