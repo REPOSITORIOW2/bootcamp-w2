@@ -1,4 +1,4 @@
-package LC;
+package LaChiqui;
 
 
 public class FogosIndividual implements Fogos{

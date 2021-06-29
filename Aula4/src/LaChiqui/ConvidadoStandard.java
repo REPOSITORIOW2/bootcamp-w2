@@ -1,4 +1,4 @@
-package LC;
+package LaChiqui;
 
 public class ConvidadoStandard implements Convidado {
 

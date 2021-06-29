@@ -1,4 +1,4 @@
-package LC;
+package LaChiqui;
 
 import java.util.ArrayList;
 import java.util.List;

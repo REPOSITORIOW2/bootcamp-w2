@@ -1,4 +1,4 @@
-package LC;
+package LaChiqui;
 
 public interface Fogos {
 
