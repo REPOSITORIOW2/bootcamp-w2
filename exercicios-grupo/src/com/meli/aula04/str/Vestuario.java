@@ -1,4 +1,4 @@
-package br.com.meli.aulas.modulo05.parte04.grupo.atividade01;
+package com.meli.aula04.str;
 
 public class Vestuario {
     private String marca;
