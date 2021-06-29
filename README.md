@@ -5,10 +5,10 @@
     - Email: `carlos.feldmann@mercadolivre.com`
     - Pasta com exercícios: [`./cfeldmann`](./cfeldmann)
     - Repositório: [`https://github.com/CarlosFeldmann/ExerciciosBootcamp`](https://github.com/CarlosFeldmann/ExerciciosBootcamp)
- - Giovana Polissici 
+ - Giovanna Polissici 
     - Email: `giovanna.polissici@mercadolivre.com`
     - Pasta com exercícios: [`./Giovanna`](./Giovanna)
-    - Repositório: ???
+    - Repositório: [`https://github.com/Giovannapls/ExerciciosBootcamp`](https://github.com/Giovannapls/ExerciciosBootcamp)
  - Luiz Filipe Sampaio Mariz 
     - Email: `luiz.mariz@mercadolivre.com`
     - Pasta com exercícios: [`./luizfilipe`](./luizfilipe)
