@@ -1,23 +1,36 @@
 import java.lang.reflect.InvocationTargetException;
-import java.util.Arrays;
 
+@SuppressWarnings("unchecked")
 public class Application {
     public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException{
-        String sArr[] = {"A", "Z", "W", "R", "P", "B"};
-        String sArr2[] = {"B", "U", "C", "A", "P", "B"};
-        Integer iArr[] = {4,6,3,12,7,5,2};
+        Integer arr[] = new Integer[5000];
+        int valor = 5000;
+        for(int i=0; i < 5000; i++) {
+            arr[i] = valor;
+            valor--;
+        }
+        
+        Integer arr2[] = arr.clone();
+        Integer arr3[] = arr.clone();
 
-        QuickSortSorterImple<Integer> intSorter = (QuickSortSorterImple<Integer>) MyFactory.getInstance("sorterQuick");
-        intSorter.sort(iArr, null);
+        BubbleSortSorterImple<Integer> bMatrizSorter = (BubbleSortSorterImple<Integer>) MyFactory.getInstance("sorterBubble");
+        Time.start();
+        bMatrizSorter.sort(arr, null);
+        Time.stop();
+        System.out.println("Bubble = " + Time.elapsedTime());
 
-        BubbleSortSorterImple<String> strSorter = (BubbleSortSorterImple<String>) MyFactory.getInstance("sorterBubble");
-        strSorter.sort(sArr, null);
+        QuickSortSorterImple<Integer> qMatrizSorter = (QuickSortSorterImple<Integer>) MyFactory.getInstance("sorterQuick");
 
-        HeapSortSorterImple<String> strSorterHeap = (HeapSortSorterImple<String>) MyFactory.getInstance("sorterHeap");
-        strSorterHeap.sort(sArr2, null);
+        Time.start();
+        qMatrizSorter.sort(arr2, null);
+        Time.stop();
+        System.out.println("Quick = " +Time.elapsedTime());
 
-        System.out.println(Arrays.toString(iArr));
-        System.out.println(Arrays.toString(sArr));
-        System.out.println(Arrays.toString(sArr2));
+        HeapSortSorterImple<Integer> hMatrizSorter = (HeapSortSorterImple<Integer>) MyFactory.getInstance("sorterHeap");
+
+        Time.start();
+        hMatrizSorter.sort(arr3, null);
+        Time.stop();
+        System.out.println( "Heap = " +Time.elapsedTime());
     }    
 }
