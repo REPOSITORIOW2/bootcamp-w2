@@ -16,7 +16,7 @@
  - Victor Caeiro Papaleo Planas
     - Email: `victor.planas@mercadolivre.com`
     - Pasta com exercícios: [`./Victor Planas`](./Victor&#32;Planas)
-    - Repositório: [`https://github.com/Victor-Planas/bootcamp-w2`] (https://github.com/Victor-Planas/bootcamp-w2)
+    - Repositório: [`https://github.com/Victor-Planas/bootcamp-w2`](https://github.com/Victor-Planas/bootcamp-w2)
 
 
 Exercicios realizados em grupos estão localizados no diretório [`./Grupo`](./Grupo), e os individuais nas respectivas pastas.
