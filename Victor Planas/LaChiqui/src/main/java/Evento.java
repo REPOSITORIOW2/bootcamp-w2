@@ -14,7 +14,7 @@ public class Evento {
         explodeFogos(gerenciadorFogos);
         divideObolo();
     }
-    
+
 
     private void divideObolo() {
         for (Convidado convidado : listaDeConvidado) {
