@@ -12,7 +12,7 @@ public abstract class Sword extends Item implements Holdable{
             holder.sendMessage("Você é um monge e não sabe como usar uma espada!");
             return false;
         }
-        return false;
+        return true;
     }
 
     @Override
