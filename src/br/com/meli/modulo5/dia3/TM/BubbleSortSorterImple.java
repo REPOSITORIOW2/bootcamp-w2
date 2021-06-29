@@ -18,7 +18,6 @@ public class BubbleSortSorterImple implements Sorter{
             for (int j = 0; j < n-i-1; j++)
                 if (c.compare(arr[j], arr[j+1]) > 0)
                 {
-                    // swap arr[j+1] and arr[j]
                     Object temp = arr[j];
                     arr[j] = arr[j+1];
                     arr[j+1] = temp;

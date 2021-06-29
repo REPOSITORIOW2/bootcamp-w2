@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        Object[] arr = new Integer[5000];
+        Integer[] arr = new Integer[5000];
 
         Random range = new Random();
         for (int i = 0;i<5000;i++){
@@ -22,10 +22,9 @@ public class Main {
         q.sort(arr, new Comparator() {
             @Override
             public int compare(Object o1, Object o2) {
-
                 return ((Integer) o1).compareTo(((Integer) o2));
-
-            }});
+            }
+        });
 
         t.setEnd();
 

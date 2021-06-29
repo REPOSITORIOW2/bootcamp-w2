@@ -11,7 +11,7 @@ public class MyFactory {
 
         try {
 
-            FileReader fr = new FileReader("src/br/com/meli/modulo5/dia3/MyFactory.properties");
+            FileReader fr = new FileReader("src/br/com/meli/modulo5/dia3/TM/MyFactory.properties");
             p.load(fr);
 
             Class c = Class.forName(p.getProperty("sorter2"));
