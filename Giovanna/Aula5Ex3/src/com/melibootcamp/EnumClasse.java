@@ -5,5 +5,5 @@ public enum EnumClasse {
     MAGO,
     ARQUEIRO,
     PRIEST,
-    ASSASINO
+    ASSASSINO
 }
