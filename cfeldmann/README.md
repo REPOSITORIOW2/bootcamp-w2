@@ -38,6 +38,6 @@ Pasta contendo as soluções de exercicios de Carlos André Feldmann Júnior
   - [X] [PDF 1](https://docs.google.com/document/d/e/2PACX-1vTLMHWnWedHxxE4kjg1NrmzBUqYSXMs9BNF4pwYMTQ4hpHPwgvebqzmzBZ_qlhWB4kwsCJlleqFrDNV/pub)
   
 # Aula 4
-- [ ] [SaveTheRopa](https://drive.google.com/file/d/1qfHySLBVic4CsAh0oM_QnHh5pc5v-HVl/view)
-- [ ] [Dakar](https://docs.google.com/document/d/e/2PACX-1vT2-xAkcni3Iobx4pXGMfruUo74TM_cAvVKVrhM_lW_Qj-5QB2Hmncax9AjsD54STAp4TOSCB8GGduA/pub) 
-- [ ] [La Chiqui](https://docs.google.com/document/d/e/2PACX-1vR5B0Vv4PB3UXFoK39BT3KkxVFmp-WcU18jxkPhSKHBzsGzkEiHYfsKHEYrBAHDfJz0uXaoJzhCmXHK/pub)
+- [X] [SaveTheRopa](https://drive.google.com/file/d/1qfHySLBVic4CsAh0oM_QnHh5pc5v-HVl/view) [`./src/main/java/dev/feldmann/bootcamp/aula4/savetheropa/`](./src/main/java/dev/feldmann/bootcamp/aula4/savetheropa)
+- [X] [Dakar](https://docs.google.com/document/d/e/2PACX-1vT2-xAkcni3Iobx4pXGMfruUo74TM_cAvVKVrhM_lW_Qj-5QB2Hmncax9AjsD54STAp4TOSCB8GGduA/pub) [`./src/main/java/dev/feldmann/bootcamp/aula4/dakar/`](./src/main/java/dev/feldmann/bootcamp/aula4/dakar)
+- [X] [La Chiqui](https://docs.google.com/document/d/e/2PACX-1vR5B0Vv4PB3UXFoK39BT3KkxVFmp-WcU18jxkPhSKHBzsGzkEiHYfsKHEYrBAHDfJz0uXaoJzhCmXHK/pub) [`./src/main/java/dev/feldmann/bootcamp/aula4/lachiqui/`](./src/main/java/dev/feldmann/bootcamp/aula4/lachiqui)
