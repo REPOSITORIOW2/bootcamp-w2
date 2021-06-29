@@ -13,7 +13,7 @@ public class Main {
             arr[i] = range.nextInt(100000);
         }
 
-        Sorter q = (Sorter) MyFactory.getInstance();
+        Sorter q = (Sorter) MyFactory.getInstance("sorter1");
 
 
         Timer t = new Timer();
