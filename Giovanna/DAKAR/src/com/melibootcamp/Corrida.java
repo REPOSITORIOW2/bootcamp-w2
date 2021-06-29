@@ -26,11 +26,11 @@ public class Corrida {
 
     public Veiculo retornarVencedor(){
         double pontuacaoVencedora = 0 ;
-        Veiculo veiculoVencedor;
+        Veiculo veiculoVencedor = null;
         for(int i=0; i< listaVeiculos.size(); i++){
             var veiculoAtual = listaVeiculos.get(i);
             var pontuacao = veiculoAtual.getVelocidade() *  veiculoAtual.getAceleracao()
-                    / ( veiculoAtual.getAnguloDeGiro() * (veiculoAtual.getPeso() - veiculoAtual.getRodas() * 100);
+                    / ( veiculoAtual.getAnguloDeGiro() * (veiculoAtual.getPeso() - veiculoAtual.getRodas() * 100));
                     if(pontuacao > pontuacaoVencedora)
                     {
                         pontuacaoVencedora = pontuacao;
