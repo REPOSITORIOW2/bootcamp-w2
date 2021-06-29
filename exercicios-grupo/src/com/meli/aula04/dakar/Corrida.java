@@ -13,8 +13,8 @@ public class Corrida {
     private final String nome;
     private final int quantidadeDeVeiculosPermitidos;
     private final Collection<Veiculo> listaVeiculos = new ArrayList<>();
-    private final br.com.meli.aula4.dakar.Socorrista<Carro> socorristaCarro = new br.com.meli.aula4.dakar.Socorrista<>();
-    private final br.com.meli.aula4.dakar.Socorrista<br.com.meli.aula4.dakar.Moto> socorristaMoto = new br.com.meli.aula4.dakar.Socorrista<>();
+    private final Socorrista<Carro> socorristaCarro = new Socorrista<>();
+    private final Socorrista<Moto> socorristaMoto = new Socorrista<>();
 
     public Corrida(BigDecimal premioEmDolares, String nome, int quantidadeDeVeiculosPermitidos) {
         this.premioEmDolares = premioEmDolares;
@@ -41,7 +41,7 @@ public class Corrida {
     }
 
     public void registarMoto(double velocidade, double aceleracao, double anguloDeGiro, String placa){
-        registrarVeiculo(new br.com.meli.aula4.dakar.Moto(velocidade, aceleracao, anguloDeGiro, placa));
+        registrarVeiculo(new Moto(velocidade, aceleracao, anguloDeGiro, placa));
     }
 
     public void removerVeiculo(Veiculo veiculo){
@@ -67,7 +67,7 @@ public class Corrida {
         if (c instanceof Carro) {
             socorristaCarro.socorrer(c);
         }
-        if (c instanceof br.com.meli.aula4.dakar.Moto) {
+        if (c instanceof Moto) {
             socorristaMoto.socorrer(c);
         }
 
