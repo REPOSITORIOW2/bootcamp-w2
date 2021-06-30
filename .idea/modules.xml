@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Aula3_TM_Exercicio1/Aula3_TM_Exercicio1.iml" filepath="$PROJECT_DIR$/Aula3_TM_Exercicio1/Aula3_TM_Exercicio1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exercise1_Java_TM/Exercise1_Java_TM.iml" filepath="$PROJECT_DIR$/Exercise1_Java_TM/Exercise1_Java_TM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exercise1_Java_TT/Exercise1_Java_TT.iml" filepath="$PROJECT_DIR$/Exercise1_Java_TT/Exercise1_Java_TT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exercise2_Java_TM/Exercise2_Java_TM.iml" filepath="$PROJECT_DIR$/Exercise2_Java_TM/Exercise2_Java_TM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/bootcamp-w2.iml" filepath="$PROJECT_DIR$/.idea/bootcamp-w2.iml" />
+    </modules>
+  </component>
+</project>
