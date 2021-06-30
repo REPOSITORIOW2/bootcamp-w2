@@ -10,4 +10,6 @@ Membros:
 
 - Victor Rodrigues (victor.vrodrigues@mercadolivre.com) https://github.com/vicrodrigues96
 
--
+- Miria Bernardes (https://github.com/miria-bernardes)
+
+
