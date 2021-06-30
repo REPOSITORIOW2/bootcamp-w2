@@ -9,7 +9,7 @@ public class Representacao {
     private Map<String, Integer> romanoIntValues = new LinkedHashMap<String, Integer>();
 
     public Representacao(String romano) {
-        this.romano = romano;
+        this.romano = romano.toUpperCase();
         this.initializeHash();
     }
 
