@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/modulo_5_aula_2/src/Ex02_tm/Ex02_tm.iml" filepath="$PROJECT_DIR$/modulo_5_aula_2/src/Ex02_tm/Ex02_tm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modulo_5_aula_2/src/Ex02_tm/hugo/Exercicio1/Exercicio1.iml" filepath="$PROJECT_DIR$/modulo_5_aula_2/src/Ex02_tm/hugo/Exercicio1/Exercicio1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modulo_5_aula_2/src/Ex02_tm/hugo/Exercicio2/Exercicio2.iml" filepath="$PROJECT_DIR$/modulo_5_aula_2/src/Ex02_tm/hugo/Exercicio2/Exercicio2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modulo_5_aula_2/src/Ex02_tm/hugo/Exercicio3/Exercicio3.iml" filepath="$PROJECT_DIR$/modulo_5_aula_2/src/Ex02_tm/hugo/Exercicio3/Exercicio3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modulo_5_aula_2/src/Ex02_tm/hugo/Exercicio4/Exercicio4.iml" filepath="$PROJECT_DIR$/modulo_5_aula_2/src/Ex02_tm/hugo/Exercicio4/Exercicio4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/bootcamp-w2.iml" filepath="$PROJECT_DIR$/.idea/bootcamp-w2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modulo_5_aula_2/modulo_5_aula_2.iml" filepath="$PROJECT_DIR$/modulo_5_aula_2/modulo_5_aula_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modulo_5_aula_2/src/Ex02_tm/pablo/pablo.iml" filepath="$PROJECT_DIR$/modulo_5_aula_2/src/Ex02_tm/pablo/pablo.iml" />
+    </modules>
+  </component>
+</project>
