@@ -10,7 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class ConversorController {
 
     @GetMapping("/romano")
-    public String sayHello(@RequestParam(value = "numero", defaultValue = "1") Integer numero) {
+    public String converterRomano(@RequestParam(value = "numero", defaultValue = "1") Integer numero) {
         return String.format(NumeroRomano.converterParaRomano(numero));
+    }
+
+    @GetMapping("/morse")
+    public String sayHello(@RequestParam(value = "codigoMorse", defaultValue = "1") String codigoMorse) {
+        return String.format(CodigoMorse.traduzirMorse(codigoMorse));
     }
 }
