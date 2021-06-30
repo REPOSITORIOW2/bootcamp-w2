@@ -8,6 +8,6 @@ Membros:
 
 - Jhonas V Mutton (jhonas.mutton@mercadolivre.com) https://github.com/JhonasML/bootcamp-meli
 
--
+- Victor Rodrigues (victor.vrodrigues@mercadolivre.com) https://github.com/vicrodrigues96
 
 -
