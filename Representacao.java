@@ -59,8 +59,10 @@ public class Representacao {
       for (String symbol : romanoIntValues.keySet()) {
         int symbolValue = romanoIntValues.get(symbol);
         if (number >= symbolValue) {
+          System.out.println(number + " " + symbolValue + " " + symbol);
           number -= symbolValue;
           sb.append(symbol);
+          break;
         }
       }
     }
@@ -73,9 +75,9 @@ public class Representacao {
   }
 
   public static void main(String[] args) {
-    Representacao r = new Representacao("MCMXCIX");
+    Representacao r = new Representacao("LXXXVIII");
     System.out.println(r);
-    Representacao s = new Representacao(1999);
+    Representacao s = new Representacao(88);
     System.out.println(s.toRoman());
   }
 }
