@@ -59,7 +59,6 @@ public class Representacao {
       for (String symbol : romanoIntValues.keySet()) {
         int symbolValue = romanoIntValues.get(symbol);
         if (number >= symbolValue) {
-          System.out.println(number + " " + symbolValue + " " + symbol);
           number -= symbolValue;
           sb.append(symbol);
           break;
