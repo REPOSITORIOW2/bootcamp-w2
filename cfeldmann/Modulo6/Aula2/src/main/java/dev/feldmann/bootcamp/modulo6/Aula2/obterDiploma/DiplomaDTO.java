@@ -1,4 +1,4 @@
-package dev.feldmann.bootcamp.modulo6.Aula2.obterIdioma;
+package dev.feldmann.bootcamp.modulo6.Aula2.obterDiploma;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

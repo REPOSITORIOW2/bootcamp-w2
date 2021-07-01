@@ -13,10 +13,10 @@ Todos exercicios estão no mesmo projeto!
 # Aula 2
 [`./Aula2`](./Aula2)
 - [X] TM
-  - [X] [Prática: calculadora metros quadrados](https://drive.google.com/file/d/1gf1iDylVcSNq3klY1kKMr3UXRdYV83h4/view)
-  - [X] [Prática: calculadora de idade](https://drive.google.com/file/u/0/d/1FFb2R9jMkS_2lhL35wk1zNLC-lcogZfI/view)
+  - [X] [Prática: calculadora metros quadrados](https://drive.google.com/file/d/1gf1iDylVcSNq3klY1kKMr3UXRdYV83h4/view) [`./Aula2/src/main/java/dev/feldmann/bootcamp/modulo6/Aula2/calculadoraMetrosQuadrados`](./Aula2/src/main/java/dev/feldmann/bootcamp/modulo6/Aula2/calculadoraMetrosQuadrados)
+  - [X] [Prática: calculadora de idade](https://drive.google.com/file/u/0/d/1FFb2R9jMkS_2lhL35wk1zNLC-lcogZfI/view) [`./Aula2/src/main/java/dev/feldmann/bootcamp/modulo6/Aula2/calculadoraIdade`](./Aula2/src/main/java/dev/feldmann/bootcamp/modulo6/Aula2/calculadoraIdade)
 - [X] TT
-  - [X] [Prática: obter diploma](https://drive.google.com/file/d/1ph5fIAtknsycGAsVgzgyUY_R5CRNIVtu/view)
-  - [ ] [Prática Complementar](https://drive.google.com/file/d/1ZxFm_WpxKftUMcJ2mhLUf53jAtuG_vrI/view)
-    - [X] Exercício 1
+  - [X] [Prática: obter diploma](https://drive.google.com/file/d/1ph5fIAtknsycGAsVgzgyUY_R5CRNIVtu/view) [`./Aula2/src/main/java/dev/feldmann/bootcamp/modulo6/Aula2/obterDiploma`](./Aula2/src/main/java/dev/feldmann/bootcamp/modulo6/Aula2/obterDiploma)
+  - [ ] [Prática Complementar](https://drive.google.com/file/d/1ZxFm_WpxKftUMcJ2mhLUf53jAtuG_vrI/view) 
+    - [X] Exercício 1 [`./Aula2/src/main/java/dev/feldmann/bootcamp/modulo6/Aula2/restaurante`](./Aula2/src/main/java/dev/feldmann/bootcamp/modulo6/Aula2/restaurante)
     - [ ] Exercício 2

@@ -1,4 +1,4 @@
-package dev.feldmann.bootcamp.modulo6.Aula2.obterIdioma;
+package dev.feldmann.bootcamp.modulo6.Aula2.obterDiploma;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

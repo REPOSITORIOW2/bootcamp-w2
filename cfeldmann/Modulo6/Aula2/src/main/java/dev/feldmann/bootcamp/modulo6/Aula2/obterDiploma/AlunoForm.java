@@ -1,7 +1,6 @@
-package dev.feldmann.bootcamp.modulo6.Aula2.obterIdioma;
+package dev.feldmann.bootcamp.modulo6.Aula2.obterDiploma;
 
 import lombok.Data;
-import org.hibernate.validator.constraints.Range;
 
 import javax.validation.Valid;
 import javax.validation.constraints.*;
