@@ -17,3 +17,5 @@ Para evitar conflitos apenas um integrante do grupo deve subir as atividades.
 [Aula 1 - Introdução a Spring TM](https://github.com/wagnernegrao/bootcamp-meli/tree/main/aulas-spring/Modulo06/Aula01-TM/Equipe/numerosRomanos)
 
 [Aula 1 - Introdução a Spring TT](https://github.com/wagnernegrao/bootcamp-meli/tree/main/aulas-spring/Modulo06/Aula01-TT/Equipe/codigoMorse)
+
+[Aula 2 - Introdução a Spring TM](https://github.com/LarissaGMalagoli/calculadoraMetrosQuadrados)
