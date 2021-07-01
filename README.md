@@ -12,7 +12,7 @@
  - Luiz Filipe Sampaio Mariz 
     - Email: `luiz.mariz@mercadolivre.com`
     - Pasta com exercícios: [`./luizfilipe`](./luizfilipe)
-    - Repositório: ???
+    - Repositório: [`https://github.com/lmarizmeli/bootcamp-exercises`](https://github.com/lmarizmeli/bootcamp-exercises)
  - Victor Caeiro Papaleo Planas
     - Email: `victor.planas@mercadolivre.com`
     - Pasta com exercícios: [`./Victor Planas`](./Victor&#32;Planas)
