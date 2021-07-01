@@ -4,7 +4,7 @@ Membros:
 
 - Nathan Formentin Garcia (nathan.formentin@mercadolivre.com) - Repositório com exercícios individuais: https://github.com/nathanformentin/repo-meli
 
-- Marcelo M Colchete (marcelo.colchete@mercadolivre.com)
+- Marcelo M Colchete (marcelo.colchete@mercadolivre.com) https://github.com/colchetemeli/playground-colchete
 
 - Jhonas V Mutton (jhonas.mutton@mercadolivre.com) https://github.com/JhonasML/bootcamp-meli
 
