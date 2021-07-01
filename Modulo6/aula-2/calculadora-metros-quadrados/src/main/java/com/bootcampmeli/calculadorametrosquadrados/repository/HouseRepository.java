@@ -6,37 +6,38 @@ import java.util.Optional;
 
 import com.bootcampmeli.calculadorametrosquadrados.entities.House;
 import com.bootcampmeli.calculadorametrosquadrados.entities.Room;
-// import com.bootcampmeli.calculadorametrosquadrados.interfaces.IHouseRepository;
+import com.bootcampmeli.calculadorametrosquadrados.interfaces.IHouseRepository;
 
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class HouseRepository {
+public class HouseRepository implements IHouseRepository {
 
-    private List<House> houses;
+    private List<House> houses = new ArrayList<>();
 
-    
+
     public HouseRepository() {
-        List<Room> rooms1 = new ArrayList<>();
-        rooms1.add(new Room(10f, 5f, "Sala de Estar"));
-        rooms1.add(new Room(2f, 4f, "Cozinha"));
-        rooms1.add(new Room(5f, 5f, "Quarto"));
+        List<Room> rooms1 = List.of(
+            new Room(10f, 5f, "Sala de Estar"),
+            new Room(2f, 4f, "Cozinha"),
+            new Room(5f, 5f, "Quarto")
+        );
 
-        List<Room> rooms2 = new ArrayList<>();
-        rooms1.add(new Room(3f, 4f, "Hall de Entrada"));
-        rooms1.add(new Room(6f, 5f, "Escritório"));
-
-        houses = new ArrayList<>();
-        houses.add(new House("Address 1", "House 1", rooms1));
-        houses.add(new House("Address 2", "House 2", rooms2));
+        List<Room> rooms2 = List.of(
+            new Room(3f, 4f, "Hall de Entrada"),
+            new Room(6f, 5f, "Escritório")
+        );
+        
+        this.houses.add(new House("Address 1", "House 1", rooms1));
+        this.houses.add(new House("Address 2", "House 2", rooms2));
     }
 
-    //@Override
+    @Override
     public List<House> findAll() {
         return this.getHouses();
     }
 
-    //@Override
+    @Override
     public House findOne(long id) throws RuntimeException {
         Optional<House> hopt = this.houses.stream().filter( x -> x.getId() == id).findFirst();
         if(hopt.isPresent()) {
@@ -45,7 +46,7 @@ public class HouseRepository {
         throw new RuntimeException("House of id " + id + " was not found.");
     }
 
-    //@Override
+    @Override
     public float getSquareMeters(long id) {
         House house = findOne(id);
 

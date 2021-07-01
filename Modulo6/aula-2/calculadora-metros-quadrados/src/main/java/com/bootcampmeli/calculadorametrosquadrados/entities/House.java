@@ -8,7 +8,7 @@ public class House {
     private String name;
     private String address;
     private List<Room> rooms;
-    private static Long universalId;
+    private static Long universalId = 0L;
     private Long id;
 
     

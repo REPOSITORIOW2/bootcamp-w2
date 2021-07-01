@@ -8,7 +8,6 @@ import com.bootcampmeli.calculadorametrosquadrados.dtos.HouseValueDTO;
 import com.bootcampmeli.calculadorametrosquadrados.dtos.RoomDTO;
 import com.bootcampmeli.calculadorametrosquadrados.services.HouseService;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,9 +19,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/houses")
 public class HouseController {
 
-    @Autowired
-    private HouseService houseService;// = new HouseService();
+    private final HouseService houseService;
 
+
+    public HouseController(HouseService houseService) {
+        this.houseService = houseService;
+    }
 
     @GetMapping
     @ResponseStatus(code = HttpStatus.OK)
@@ -36,7 +38,7 @@ public class HouseController {
         return this.houseService.findOne(id);
     }
 
-    @GetMapping("{id}/square-meters/room")
+    @GetMapping("{id}/square-meters")
     @ResponseStatus(code = HttpStatus.OK)
     public float getSquareMeters(@PathVariable long id) {
         return this.houseService.getSquareMeters(id);
