@@ -1,12 +1,23 @@
-# Bootcamp - MeLi (Wave 2)
+# Bootcamp - MeLi (Wave 2) - Grupo 11
+
+## Integrantes
+ - Carlos André Feldmann Júnior 
+    - Email: `carlos.feldmann@mercadolivre.com`
+    - Pasta com exercícios: [`./cfeldmann`](./cfeldmann)
+    - Repositório: [`https://github.com/CarlosFeldmann/ExerciciosBootcamp`](https://github.com/CarlosFeldmann/ExerciciosBootcamp)
+ - Giovanna Polissici 
+    - Email: `giovanna.polissici@mercadolivre.com`
+    - Pasta com exercícios: [`./Giovanna`](./Giovanna)
+    - Repositório: [`https://github.com/Giovannapls/ExerciciosBootcamp`](https://github.com/Giovannapls/ExerciciosBootcamp)
+ - Luiz Filipe Sampaio Mariz 
+    - Email: `luiz.mariz@mercadolivre.com`
+    - Pasta com exercícios: [`./luizfilipe`](./luizfilipe)
+    - Repositório: [`https://github.com/lmarizmeli/bootcamp-exercises`](https://github.com/lmarizmeli/bootcamp-exercises)
+ - Victor Caeiro Papaleo Planas
+    - Email: `victor.planas@mercadolivre.com`
+    - Pasta com exercícios: [`./Victor Planas`](./Victor&#32;Planas)
+    - Repositório: [`https://github.com/Victor-Planas/bootcamp-w2`](https://github.com/Victor-Planas/bootcamp-w2)
 
 
-Este repositório é detinado as atividades em grupo durante o bootcamp.
-Todas as atividades individuais deverão ser entregues pelo seu próprio GitHub com email MeLi.
+Exercicios realizados em grupos estão localizados no diretório [`./Grupo`](./Grupo), e os individuais nas respectivas pastas.
 
-
-### Como utilizar?
-
-
-Cada grupo possuí uma branch específica, para postar as atividades ao longo do curso. 
-Para evitar conflitos apenas um integrante do grupo deve subir as atividades.
