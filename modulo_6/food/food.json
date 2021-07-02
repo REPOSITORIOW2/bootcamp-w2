@@ -1,0 +1,34 @@
+[
+  {
+    "nome": "Alho acebolado",
+    "calorias": 200.0,
+    "ingredientes": [
+      {
+        "name": "Acelgas",
+        "calories": 33
+      },
+      {
+        "name": "Ajos",
+        "calories": 169
+      }
+    ]
+  },
+  {
+    "nome": "Rabanete espanhol",
+    "calorias": 345.0,
+    "ingredientes": [
+      {
+        "name": "Puerros",
+        "calories": 42
+      },
+      {
+        "name": "Rábanos",
+        "calories": 20
+      },
+      {
+        "name": "Remolacha",
+        "calories": 40
+      }
+    ]
+  }
+]
