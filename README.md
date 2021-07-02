@@ -22,3 +22,6 @@ Para evitar conflitos apenas um integrante do grupo deve subir as atividades.
 
 [Aula 2 - Introdução a Spring TM](https://github.com/REPOSITORIOW2/bootcamp-w2/tree/grupo-3/exercicios-grupo/src/com/meli/Modulo6/calcidade)
 
+[Aula 3 - Introdução a MVC e injeção de dependências TM](https://github.com/joutavm/calorias-bootcmap)
+
+
