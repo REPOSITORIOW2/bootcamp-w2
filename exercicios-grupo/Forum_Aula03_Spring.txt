@@ -1,0 +1,4 @@
+O problema nesta abordagem é que não há uma comunicação eficaz entre os serviços. Então no caso de falhas o sistema pode ser comprometido.
+
+Para solucionar isso podemos ao final da criação de cada pedido atribuir ao Order a função de notificar essa ação aos outros componentes que criamos uma order.
+Com isso, Payment e Inventory podem realizar suas funções com a garantia que um pedido foi feito e Order pode monitorar as confirmações dessas outras classes para poder dar prosseguimento nas ações.
