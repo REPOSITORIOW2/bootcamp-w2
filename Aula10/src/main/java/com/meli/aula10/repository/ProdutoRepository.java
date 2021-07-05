@@ -2,6 +2,7 @@ package com.meli.aula10.repository;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
 import com.meli.aula10.domain.Produto;
 import com.meli.aula10.domain.Usuario;
 import org.springframework.stereotype.Repository;
@@ -14,7 +15,12 @@ import java.util.List;
 
 @Repository
 public class ProdutoRepository {
-    private static final String USUARIOS_JSON_FILE = "produtos.json";
+    private static final String PRODUTOS_JSON_FILE = "produtos.json";
+    private List<Produto> listaProdutos;
+
+    public ProdutoRepository() {
+        listaProdutos = this.findAll();
+    }
 
     private File getJson(String fileName) throws FileNotFoundException {
         File file = null;
@@ -25,7 +31,7 @@ public class ProdutoRepository {
     private List<Produto> getProdutos() {
         List<Produto> produtos = null;
         try {
-            File file = this.getJson(USUARIOS_JSON_FILE);
+            File file = this.getJson(PRODUTOS_JSON_FILE);
             ObjectMapper mapper = new ObjectMapper();
             TypeReference<List<Produto>> typeRef = new TypeReference<>() {
             };
@@ -37,8 +43,14 @@ public class ProdutoRepository {
     }
 
     public Produto getById(int id){
-        List<Produto> novaLista = findAll();
-        var produtoOpt = novaLista.stream().filter(p -> p.getId() == id).findFirst();
+        var produtoOpt = this.listaProdutos.stream().filter(p -> p.getId() == id).findFirst();
+        if(produtoOpt.isPresent())
+            return produtoOpt.get();
+        return null;
+    }
+
+    public Produto getByIdWithList(int id, List<Produto> lista){
+        var produtoOpt = lista.stream().filter(p -> p.getId() == id).findFirst();
         if(produtoOpt.isPresent())
             return produtoOpt.get();
         return null;
@@ -49,41 +61,38 @@ public class ProdutoRepository {
     }
 
     public void addProduto(Produto p){
-        List<Produto> novaLista = findAll();
-        novaLista.add(p);
+        this.listaProdutos.add(p);
         try {
-            File file = this.getJson(USUARIOS_JSON_FILE);
+            File file = this.getJson(PRODUTOS_JSON_FILE);
             ObjectMapper mapper = new ObjectMapper();
-            mapper.writeValue(file, novaLista);
+            mapper.writeValue(file, this.listaProdutos);
         }catch (IOException e){
             e.printStackTrace();
         }
     }
 
     public void removeProduto(int idProduto){
-        List<Produto> novaLista = findAll();
         Produto produtoImportado = getById(idProduto);
-        novaLista.remove(produtoImportado);
+        boolean foiRemovido = this.listaProdutos.remove(produtoImportado);
         try {
-            File file = this.getJson(USUARIOS_JSON_FILE);
+            File file = this.getJson(PRODUTOS_JSON_FILE);
             ObjectMapper mapper = new ObjectMapper();
-            mapper.writeValue(file, novaLista);
+            mapper.writeValue(file, this.listaProdutos);
         }catch (IOException e){
             e.printStackTrace();
         }
     }
 
     public void editProduto(int id, Produto p){
-        List<Produto> novaLista = findAll();
         Produto produtoImportado = getById(id);
         produtoImportado.setNome(p.getNome());
         produtoImportado.setCategorias(p.getCategorias());
         produtoImportado.setValor(p.getValor());
         produtoImportado.setQuantidade(p.getQuantidade());
         try {
-            File file = this.getJson(USUARIOS_JSON_FILE);
+            File file = this.getJson(PRODUTOS_JSON_FILE);
             ObjectMapper mapper = new ObjectMapper();
-            mapper.writeValue(file, novaLista);
+            mapper.writeValue(file, this.listaProdutos);
         }catch (IOException e){
             e.printStackTrace();
         }
