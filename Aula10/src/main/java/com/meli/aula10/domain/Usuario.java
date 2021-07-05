@@ -7,6 +7,9 @@ public abstract class Usuario {
     private String nome;
     private TipoUsuario tipoUsuario;
 
+    public Usuario() {
+    }
+
     public Usuario(int id, String nome, TipoUsuario tipo) {
         this.id = id;
         this.nome = nome;
@@ -27,5 +30,13 @@ public abstract class Usuario {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public TipoUsuario getTipoUsuario() {
+        return tipoUsuario;
+    }
+
+    public void setTipoUsuario(TipoUsuario tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
     }
 }
