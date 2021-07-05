@@ -3,7 +3,7 @@
 ## Integrantes
  - Carlos André Feldmann Júnior 
     - Email: `carlos.feldmann@mercadolivre.com`
-    - Pasta com exercícios: [`./cfeldmann`](./cfeldmann)
+    - Pasta com exercícios: [`./cfeldmann`](https://github.com/CarlosFeldmann/ExerciciosBootcamp)
     - Repositório: [`https://github.com/CarlosFeldmann/ExerciciosBootcamp`](https://github.com/CarlosFeldmann/ExerciciosBootcamp)
  - Giovanna Polissici 
     - Email: `giovanna.polissici@mercadolivre.com`
