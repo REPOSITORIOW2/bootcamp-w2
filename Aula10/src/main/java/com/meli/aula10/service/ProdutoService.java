@@ -1,5 +1,6 @@
 package com.meli.aula10.service;
 
+import com.meli.aula10.domain.Admin;
 import com.meli.aula10.domain.Produto;
 import com.meli.aula10.domain.Usuario;
 import com.meli.aula10.domain.enums.TipoUsuario;
@@ -18,7 +19,7 @@ public class ProdutoService {
     ProdutoRepository produtoRepository;
     private boolean verificaAdm(int id){
         Usuario usuario = repository.findById(id);
-        if(usuario.getTipoUsuario() == TipoUsuario.ADMIN)
+        if(usuario.getClass() == Admin.class)
             return true;
         else
             return false;

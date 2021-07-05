@@ -1,5 +1,7 @@
 package com.meli.aula10.service;
 
+import com.meli.aula10.domain.Admin;
+import com.meli.aula10.domain.Cliente;
 import com.meli.aula10.domain.Pedido;
 import com.meli.aula10.domain.Usuario;
 import com.meli.aula10.domain.enums.TipoUsuario;
@@ -15,7 +17,7 @@ public class UsuarioService {
 
     private boolean verificaCliente(int id){
         Usuario usuario = usuarioRepository.findById(id);
-        if(usuario.getTipoUsuario() == TipoUsuario.CLIENTE)
+        if(usuario.getClass() == Cliente.class)
             return true;
         else
             return false;

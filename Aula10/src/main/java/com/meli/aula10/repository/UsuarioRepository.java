@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.meli.aula10.domain.Cliente;
 import com.meli.aula10.domain.Pedido;
 import com.meli.aula10.domain.Usuario;
+import com.meli.aula10.domain.enums.TipoUsuario;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.ResourceUtils;
 
@@ -52,6 +53,14 @@ public class UsuarioRepository {
 
     public void addPedido(int idUsuario, Pedido pedido) {
         Cliente usuario = (Cliente) findById(idUsuario);
+        usuario.setTipoUsuario(TipoUsuario.CLIENTE);
         usuario.addPedido(pedido);
+        try {
+            File file = this.getJson(USUARIOS_JSON_FILE);
+            ObjectMapper mapper = new ObjectMapper();
+            mapper.writeValue(file, this.listaUsuarios);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 }
