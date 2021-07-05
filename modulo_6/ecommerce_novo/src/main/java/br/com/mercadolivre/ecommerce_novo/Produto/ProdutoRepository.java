@@ -32,6 +32,11 @@ public class ProdutoRepository {
         return produtos.remove(produto);
     }
 
+    public static void alterarProduto(Long id, ProdutoDTO produtoDTO, Produto oldProduct){
+        int index = produtos.indexOf(oldProduct);
+        produtos.set(index, ProdutoDTO.converte(produtoDTO, id));
+    }
+
     //public void remove(Long id) {
     //    produtos = produtos.stream().filter(p -> !p.getId().equals(id)).collect(Collectors.toList());
     //}

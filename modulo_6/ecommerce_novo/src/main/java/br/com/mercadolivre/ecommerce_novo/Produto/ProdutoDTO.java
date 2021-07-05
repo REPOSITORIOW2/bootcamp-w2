@@ -59,6 +59,10 @@ public class ProdutoDTO {
         return new Produto(produtoId++, produtoDTO);
     }
 
+    public static Produto converte(ProdutoDTO produtoDTO, Long id) {
+        return new Produto(id, produtoDTO);
+    }
+
     public static ProdutoDTO converte(Produto produto){
         return new ProdutoDTO(produto.getNome(),
                               produto.getValor(),

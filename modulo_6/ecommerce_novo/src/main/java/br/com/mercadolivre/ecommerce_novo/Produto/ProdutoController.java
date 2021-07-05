@@ -15,15 +15,18 @@ public class ProdutoController {
     private CreateServiceProduto createServiceProduto;
     private RemoveServiceProduto removeServiceProduto;
     private MostraServiceProduto mostraServiceProduto;
+    private AlteraServiceProduto alteraServiceProduto;
 
 
     @Autowired
     public ProdutoController(CreateServiceProduto createServiceProduto,
                              RemoveServiceProduto removeServiceProduto,
-                             MostraServiceProduto mostraServiceProduto) {
+                             MostraServiceProduto mostraServiceProduto,
+                             AlteraServiceProduto alteraServiceProduto) {
         this.createServiceProduto = createServiceProduto;
         this.removeServiceProduto = removeServiceProduto;
         this.mostraServiceProduto = mostraServiceProduto;
+        this.alteraServiceProduto = alteraServiceProduto;
     }
 
     @PostMapping
@@ -46,6 +49,12 @@ public class ProdutoController {
     @GetMapping()
     public ResponseEntity<List<ProdutoDTO>> mostraProdutos(){
         return new ResponseEntity<>(ProdutoDTO.converte(mostraServiceProduto.execute()), HttpStatus.OK);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<String> alteraProduto(@PathVariable Long id, @RequestBody ProdutoDTO produtoDTO,
+                                                    @RequestHeader("level") String level){
+        return new ResponseEntity<>(alteraServiceProduto.execute(id, produtoDTO, Level.valueOf(level)), HttpStatus.OK);
     }
 
 //    @GetMapping
