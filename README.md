@@ -24,4 +24,8 @@ Para evitar conflitos apenas um integrante do grupo deve subir as atividades.
 
 [Aula 3 - Introdução a MVC e injeção de dependências TM](https://github.com/joutavm/calorias-bootcmap)
 
+[Aula 4 - Tratamento de erros e prática integrativa](https://github.com/joutavm/bootcamp-commerce)
+
+
+
 
