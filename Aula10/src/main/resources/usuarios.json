@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "nome": "Administrador",
+    "tipo": "admin"
+  },
+  {
+    "id": 2,
+    "nome": "Comprador",
+    "tipo": "cliente",
+    "pedidos": [
+      {
+        "id": 1123,
+        "produtos": [
+          {
+            "id": 1293,
+            "nome": "TV",
+            "categorias": [
+              "eletronico",
+              "eletrodeomestico"
+            ],
+            "quantidade": 1,
+            "valor": 100.00
+          },
+          {
+            "id": 324,
+            "nome": "Controle Smart",
+            "categorias": [
+              "eletronico",
+              "eletrodeomestico"
+            ],
+            "quantidade": 2,
+            "valor": 50.00
+          }
+        ],
+        "clientId": 2,
+        "valorTotal": 200.00
+      },
+      {
+        "id": 1124,
+        "produtos": [
+          {
+            "id": 123,
+            "nome": "MacBook",
+            "categorias": [
+              "eletronico",
+              "computador"
+            ],
+            "quantidade": 1,
+            "valor": 20000.00
+          }
+        ],
+        "clientId": 2,
+        "valorTotal": 20000.00
+      }
+    ]
+  }
+]
