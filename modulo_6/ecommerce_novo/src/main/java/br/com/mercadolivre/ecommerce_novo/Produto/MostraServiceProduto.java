@@ -3,6 +3,9 @@ package br.com.mercadolivre.ecommerce_novo.Produto;
 import br.com.mercadolivre.ecommerce_novo.Exception.ProdutoNaoEncontradoException;
 import br.com.mercadolivre.ecommerce_novo.Usuario.Level;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class MostraServiceProduto {
@@ -14,15 +17,19 @@ public class MostraServiceProduto {
         this.produtoRepository = produtoRepository;
     }
 
-    public String execute(Long id) {
+    public Produto execute(Long id) {
         Produto produtoEncontrado = produtoRepository.encontrarPorId(id);
 
         if (produtoEncontrado != null) {
-            boolean resultado = produtoRepository.mostra(produtoEncontrado);
+            return produtoEncontrado;
 
         } else {
             throw new ProdutoNaoEncontradoException();
         }
+    }
+
+    public List<Produto> execute(){
+        return ProdutoRepository.getProdutos();
     }
 
 

@@ -6,6 +6,7 @@ import br.com.mercadolivre.ecommerce_novo.Usuario.Usuario;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ProdutoDTO {
 
@@ -56,5 +57,18 @@ public class ProdutoDTO {
 
     public static Produto converte(ProdutoDTO produtoDTO) {
         return new Produto(produtoId++, produtoDTO);
+    }
+
+    public static ProdutoDTO converte(Produto produto){
+        return new ProdutoDTO(produto.getNome(),
+                              produto.getValor(),
+                              produto.getQuantidade(),
+                              produto.getCategorias());
+    }
+
+    public static List<ProdutoDTO> converte(List<Produto> listaProdutos){
+        return listaProdutos.stream()
+                .map(ProdutoDTO::converte)
+                .collect(Collectors.toList());
     }
 }

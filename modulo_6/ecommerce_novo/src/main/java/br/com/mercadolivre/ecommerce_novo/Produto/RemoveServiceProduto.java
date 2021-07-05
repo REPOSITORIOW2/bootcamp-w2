@@ -9,17 +9,22 @@ import org.springframework.stereotype.Service;
 @Service
 public class RemoveServiceProduto {
 
-    private ProdutoRepository produtoRepository;
+    private final ProdutoRepository produtoRepository;
 
     @Autowired
     public RemoveServiceProduto(ProdutoRepository produtoRepository) {
         this.produtoRepository = produtoRepository;
     }
 
-    public Produto execute(Long id)
+    public String execute(Level level, Long id){
+        if (level.equals(Level.ADMINISTRADOR)){
+            Produto produto = produtoRepository.encontrarPorId(id);
+            if (produto != null && produtoRepository.remove(produto)) {
+                return "Remocao feita com sucesso";
+            }
+            throw new ProdutoNaoEncontradoException();
+        }
+        throw new NotAdministratorException();
     }
 
-    public List<Produto> execute(){
-
-    }
 }

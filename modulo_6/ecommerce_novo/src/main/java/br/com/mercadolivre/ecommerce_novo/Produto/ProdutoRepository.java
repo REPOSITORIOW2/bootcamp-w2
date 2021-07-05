@@ -24,6 +24,10 @@ public class ProdutoRepository {
         return produtos.stream().filter(p -> p.getId().equals(id)).findFirst().orElse(null);
     }
 
+    public static List<Produto> getProdutos() {
+        return produtos;
+    }
+
     public boolean remove(Produto produto) {
         return produtos.remove(produto);
     }

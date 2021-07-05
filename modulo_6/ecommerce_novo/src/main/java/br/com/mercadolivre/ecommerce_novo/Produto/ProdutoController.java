@@ -14,12 +14,16 @@ public class ProdutoController {
 
     private CreateServiceProduto createServiceProduto;
     private RemoveServiceProduto removeServiceProduto;
+    private MostraServiceProduto mostraServiceProduto;
 
 
     @Autowired
-    public ProdutoController(CreateServiceProduto createServiceProduto, RemoveServiceProduto removeServiceProduto) {
+    public ProdutoController(CreateServiceProduto createServiceProduto,
+                             RemoveServiceProduto removeServiceProduto,
+                             MostraServiceProduto mostraServiceProduto) {
         this.createServiceProduto = createServiceProduto;
         this.removeServiceProduto = removeServiceProduto;
+        this.mostraServiceProduto = mostraServiceProduto;
     }
 
     @PostMapping
@@ -31,6 +35,17 @@ public class ProdutoController {
     public ResponseEntity<String> removeProduto(@PathVariable Long id, @RequestHeader("level") String level) {
         String message = removeServiceProduto.execute(Level.valueOf(level), id);
         return new ResponseEntity<>(message, HttpStatus.OK);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<ProdutoDTO> mostraProduto(@PathVariable Long id){
+        return new ResponseEntity<>(ProdutoDTO.converte(mostraServiceProduto.execute(id)), HttpStatus.OK);
+    }
+
+
+    @GetMapping()
+    public ResponseEntity<List<ProdutoDTO>> mostraProdutos(){
+        return new ResponseEntity<>(ProdutoDTO.converte(mostraServiceProduto.execute()), HttpStatus.OK);
     }
 
 //    @GetMapping
