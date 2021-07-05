@@ -3,17 +3,18 @@ package com.meli.aula10.domain;
 import com.meli.aula10.domain.enums.ProdutoCategoria;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 public class Produto {
 
     private String nome;
-    private ProdutoCategoria categoria;
+    private List<ProdutoCategoria> categorias;
     private int quantidade;
     private BigDecimal valor;
 
-    public Produto(String nome, ProdutoCategoria categoria, int quantidade, BigDecimal valor) {
+    public Produto(String nome, List<ProdutoCategoria> categorias, int quantidade, BigDecimal valor) {
         this.nome = nome;
-        this.categoria = categoria;
+        this.categorias = categorias;
         this.quantidade = quantidade;
         this.valor = valor;
     }
@@ -26,12 +27,12 @@ public class Produto {
         this.nome = nome;
     }
 
-    public ProdutoCategoria getCategoria() {
-        return categoria;
+    public List<ProdutoCategoria> getCategorias() {
+        return categorias;
     }
 
-    public void setCategoria(ProdutoCategoria categoria) {
-        this.categoria = categoria;
+    public void setCategorias(List<ProdutoCategoria> categorias) {
+        this.categorias = categorias;
     }
 
     public int getQuantidade() {

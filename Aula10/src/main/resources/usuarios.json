@@ -2,12 +2,12 @@
   {
     "id": 1,
     "nome": "Administrador",
-    "tipo": "admin"
+    "tipoUsuario": "admin"
   },
   {
     "id": 2,
     "nome": "Comprador",
-    "tipo": "cliente",
+    "tipoUsuario": "cliente",
     "pedidos": [
       {
         "id": 1123,
