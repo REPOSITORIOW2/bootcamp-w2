@@ -2,6 +2,8 @@ package com.meli.aula10.repository;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.meli.aula10.domain.Cliente;
+import com.meli.aula10.domain.Pedido;
 import com.meli.aula10.domain.Usuario;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.ResourceUtils;
@@ -14,6 +16,11 @@ import java.util.List;
 @Repository
 public class UsuarioRepository {
     private static final String USUARIOS_JSON_FILE = "usuarios.json";
+    private List<Usuario> listaUsuarios;
+
+    public UsuarioRepository() {
+        this.listaUsuarios = this.findAll();
+    }
 
     private File getJson(String fileName) throws FileNotFoundException {
         File file = null;
@@ -40,7 +47,11 @@ public class UsuarioRepository {
     }
 
     public Usuario findById(int id){
-        List<Usuario> listaUsuarios = findAll();
-        return listaUsuarios.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
+        return this.listaUsuarios.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
+    }
+
+    public void addPedido(int idUsuario, Pedido pedido) {
+        Cliente usuario = (Cliente) findById(idUsuario);
+        usuario.addPedido(pedido);
     }
 }

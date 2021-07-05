@@ -9,8 +9,8 @@ import com.meli.aula10.domain.enums.TipoUsuario;
         include = JsonTypeInfo.As.PROPERTY,
         property = "tipoUsuario")
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = Admin.class, name = "admin"),
-        @JsonSubTypes.Type(value = Cliente.class, name = "cliente")})
+        @JsonSubTypes.Type(value = Admin.class, name = "ADMIN"),
+        @JsonSubTypes.Type(value = Cliente.class, name = "CLIENTE")})
 public abstract class Usuario {
     private int id;
     private String nome;

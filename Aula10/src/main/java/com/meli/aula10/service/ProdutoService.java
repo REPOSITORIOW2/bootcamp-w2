@@ -2,6 +2,7 @@ package com.meli.aula10.service;
 
 import com.meli.aula10.domain.Produto;
 import com.meli.aula10.domain.Usuario;
+import com.meli.aula10.domain.enums.TipoUsuario;
 import com.meli.aula10.repository.ProdutoRepository;
 import com.meli.aula10.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ public class ProdutoService {
     ProdutoRepository produtoRepository;
     private boolean verificaAdm(int id){
         Usuario usuario = repository.findById(id);
-        if(id == usuario.getId())
+        if(usuario.getTipoUsuario() == TipoUsuario.ADMIN)
             return true;
         else
             return false;

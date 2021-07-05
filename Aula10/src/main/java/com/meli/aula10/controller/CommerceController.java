@@ -5,6 +5,7 @@ import com.meli.aula10.domain.Produto;
 import com.meli.aula10.repository.ProdutoRepository;
 import com.meli.aula10.repository.UsuarioRepository;
 import com.meli.aula10.service.ProdutoService;
+import com.meli.aula10.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,21 +14,15 @@ import org.springframework.web.bind.annotation.*;
 public class CommerceController {
 
     @Autowired
-    UsuarioRepository usarioRepository;
+    UsuarioService usuarioService;
 
     @Autowired
     ProdutoService produtoService;
 
     @RequestMapping(value = "/pedido/{clientId}", method = RequestMethod.POST)
     public void addPedido(@PathVariable int clientId, @RequestBody Pedido pedido){
-
+        usuarioService.addPedido(clientId, pedido);
     }
-
-    @RequestMapping(value = "/pedido", method = RequestMethod.GET)
-    public void addPedido(){
-        System.out.println(usarioRepository.findAll());
-    }
-
 
     //ADMIN
 
