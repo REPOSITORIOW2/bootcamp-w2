@@ -33,7 +33,7 @@ public class LinkService {
 
     public int returnRedirectCount(long linkId, String Password) {
         var link = urls.get(linkId);
-        if(link!=null && link.getPassword() == Password){
+        if(link!=null && link.getPassword().equals(Password)){
             return link.getClicks();
         }
         else{
@@ -43,7 +43,7 @@ public class LinkService {
 
     public String invalidateUrl(long idlink, String Password) {
         var url = urls.get(idlink);
-        if(url!=null && url.getPassword() == Password){
+        if(url!=null && url.getPassword().equals(Password)){
             urls.get(idlink).setActive(false);
             return idlink + " foi invalidado.";
         }
@@ -54,7 +54,7 @@ public class LinkService {
 
     public Link redirectTo(long idlink , String Password) {
         var url = urls.get(idlink);
-        if(url!=null && url.isActive() && url.getPassword() == Password){
+        if(url!=null && url.isActive() && url.getPassword().equals(Password)){
             url.setClicks(url.getClicks() + 1);
             return url;
         }
