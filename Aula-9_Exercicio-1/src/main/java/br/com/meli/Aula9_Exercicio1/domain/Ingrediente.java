@@ -1,9 +1,16 @@
 package br.com.meli.Aula9_Exercicio1.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Ingrediente {
+	@JsonProperty("name")
     private String nome;
+	@JsonProperty("calories")
     private int caloria;
 
+    public Ingrediente() {
+    }
+    
     public Ingrediente(String nome, int caloria) {
         this.nome = nome;
         this.caloria = caloria;

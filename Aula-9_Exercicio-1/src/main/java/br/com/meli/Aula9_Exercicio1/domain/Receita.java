@@ -2,10 +2,18 @@ package br.com.meli.Aula9_Exercicio1.domain;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Receita {
+	@JsonProperty("name")
     private String nome;
+	@JsonProperty("calories")
     private int caloriasTotais;
+	@JsonProperty("ingredientes")
     List<Ingrediente> ingredientes;
+    
+    public Receita() {
+    }
 
     public Receita(String nome, int caloriasTotais) {
         this.nome = nome;
