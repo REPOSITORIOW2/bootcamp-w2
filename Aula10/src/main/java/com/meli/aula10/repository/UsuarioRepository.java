@@ -53,7 +53,7 @@ public class UsuarioRepository {
 
     public void addPedido(int idUsuario, Pedido pedido) {
         Cliente usuario = (Cliente) findById(idUsuario);
-        usuario.setTipoUsuario(TipoUsuario.CLIENTE);
+        //usuario.setTipoUsuario(TipoUsuario.CLIENTE);
         usuario.addPedido(pedido);
         try {
             File file = this.getJson(USUARIOS_JSON_FILE);

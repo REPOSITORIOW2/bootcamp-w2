@@ -1,11 +1,18 @@
 package com.meli.aula10.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.meli.aula10.domain.enums.TipoUsuario;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@JsonTypeName("Cliente")
 public class Cliente extends Usuario{
+
+    @JsonProperty("tipoUsuario")
+    private final String tipoUsuario = "Cliente";
+
     private List<Pedido> pedidos;
 
     public Cliente() {
@@ -16,7 +23,7 @@ public class Cliente extends Usuario{
     }
 
     public Cliente(int id, String nome, ArrayList<Pedido>pedidos) {
-        super(id, nome, TipoUsuario.CLIENTE);
+        super(id, nome);
         this.pedidos = pedidos;
     }
 

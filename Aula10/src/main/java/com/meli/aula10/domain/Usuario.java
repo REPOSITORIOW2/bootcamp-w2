@@ -9,20 +9,18 @@ import com.meli.aula10.domain.enums.TipoUsuario;
         include = JsonTypeInfo.As.PROPERTY,
         property = "tipoUsuario")
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = Admin.class, name = "ADMIN"),
-        @JsonSubTypes.Type(value = Cliente.class, name = "CLIENTE")})
+        @JsonSubTypes.Type(value = Admin.class, name = "Admin"),
+        @JsonSubTypes.Type(value = Cliente.class, name = "Cliente")})
 public abstract class Usuario {
     private int id;
     private String nome;
-    private TipoUsuario tipoUsuario;
 
     public Usuario() {
     }
 
-    public Usuario(int id, String nome, TipoUsuario tipo) {
+    public Usuario(int id, String nome) {
         this.id = id;
         this.nome = nome;
-        this.tipoUsuario = tipo;
     }
 
     public int getId() {
@@ -41,20 +39,11 @@ public abstract class Usuario {
         this.nome = nome;
     }
 
-    public TipoUsuario getTipoUsuario() {
-        return tipoUsuario;
-    }
-
-    public void setTipoUsuario(TipoUsuario tipoUsuario) {
-        this.tipoUsuario = tipoUsuario;
-    }
-
     @Override
     public String toString() {
         return "Usuario{" +
                 "id=" + id +
-                ", nome='" + nome + '\'' +
-                ", tipoUsuario=" + tipoUsuario +
+                ", nome='" + nome +
                 '}';
     }
 }
