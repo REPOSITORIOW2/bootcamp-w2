@@ -5,6 +5,6 @@ public enum ProdutoCategoria {
     ELETRODOMESTICOS,
     ELETRONICOS,
     CELULARES,
-    COMPUTADOR
+    COMPUTADORES
 
 }

@@ -16,8 +16,8 @@
             "id": 1293,
             "nome": "TV",
             "categorias": [
-              "eletronico",
-              "eletrodeomestico"
+              "ELETRONICOS",
+              "ELETRODOMESTICOS"
             ],
             "quantidade": 1,
             "valor": 100.00
@@ -26,8 +26,8 @@
             "id": 324,
             "nome": "Controle Smart",
             "categorias": [
-              "eletronico",
-              "eletrodeomestico"
+              "ELETRONICOS",
+              "ELETRODOMESTICOS"
             ],
             "quantidade": 2,
             "valor": 50.00
@@ -43,8 +43,8 @@
             "id": 123,
             "nome": "MacBook",
             "categorias": [
-              "eletronico",
-              "computador"
+              "ELETRONICOS",
+              "COMPUTADORES"
             ],
             "quantidade": 1,
             "valor": 20000.00

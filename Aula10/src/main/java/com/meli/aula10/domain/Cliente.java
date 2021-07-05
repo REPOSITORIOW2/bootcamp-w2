@@ -8,6 +8,13 @@ import java.util.List;
 public class Cliente extends Usuario{
     private List<Pedido> pedidos;
 
+    public Cliente() {
+    }
+
+    public Cliente(List<Pedido> pedidos) {
+        this.pedidos = pedidos;
+    }
+
     public Cliente(int id, String nome, ArrayList<Pedido>pedidos) {
         super(id, nome, TipoUsuario.CLIENTE);
         this.pedidos = pedidos;
@@ -23,5 +30,12 @@ public class Cliente extends Usuario{
 
     public void setPedidos(List<Pedido> pedidos) {
         this.pedidos = pedidos;
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "pedidos=" + pedidos +
+                '}';
     }
 }

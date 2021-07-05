@@ -7,13 +7,16 @@ public class Pedido {
     private int id;
     private List<Produto> produtos;
     private int clientId;
-    private BigDecimal totalPedido;
+    private BigDecimal valorTotal;
+
+    public Pedido() {
+    }
 
     public Pedido(int id, List<Produto> produtos, int clientId, BigDecimal totalPedido) {
         this.id = id;
         this.produtos = produtos;
         this.clientId = clientId;
-        this.totalPedido = totalPedido;
+        this.valorTotal = totalPedido;
     }
 
     public int getId() {
@@ -40,17 +43,27 @@ public class Pedido {
         this.clientId = clientId;
     }
 
-    public BigDecimal getTotalPedido() {
-        return totalPedido;
+    public BigDecimal getValorTotal() {
+        return valorTotal;
     }
 
     public void addProduto(Produto produto){
         this.produtos.add(produto);
         var totalProduto = produto.getValor().multiply(BigDecimal.valueOf(produto.getQuantidade()));
-        this.totalPedido = this.totalPedido.add(totalProduto);
+        this.valorTotal = this.valorTotal.add(totalProduto);
     }
 
-    public void setTotalPedido(BigDecimal totalPedido) {
-        this.totalPedido = totalPedido;
+    public void setValorTotal(BigDecimal valorTotal) {
+        this.valorTotal = valorTotal;
+    }
+
+    @Override
+    public String toString() {
+        return "Pedido{" +
+                "id=" + id +
+                ", produtos=" + produtos +
+                ", clientId=" + clientId +
+                ", valorTotal=" + valorTotal +
+                '}';
     }
 }

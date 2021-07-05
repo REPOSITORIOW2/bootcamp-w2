@@ -6,17 +6,29 @@ import java.math.BigDecimal;
 import java.util.List;
 
 public class Produto {
-
+    private int id;
     private String nome;
     private List<ProdutoCategoria> categorias;
     private int quantidade;
     private BigDecimal valor;
 
-    public Produto(String nome, List<ProdutoCategoria> categorias, int quantidade, BigDecimal valor) {
+    public Produto() {
+    }
+
+    public Produto(int id, String nome, List<ProdutoCategoria> categorias, int quantidade, BigDecimal valor) {
+        this.id = id;
         this.nome = nome;
         this.categorias = categorias;
         this.quantidade = quantidade;
         this.valor = valor;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -49,5 +61,16 @@ public class Produto {
 
     public void setValor(BigDecimal valor) {
         this.valor = valor;
+    }
+
+    @Override
+    public String toString() {
+        return "Produto{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", categorias=" + categorias +
+                ", quantidade=" + quantidade +
+                ", valor=" + valor +
+                '}';
     }
 }

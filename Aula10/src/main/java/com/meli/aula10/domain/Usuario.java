@@ -1,7 +1,16 @@
 package com.meli.aula10.domain;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.meli.aula10.domain.enums.TipoUsuario;
 
+@JsonTypeInfo(
+        use = JsonTypeInfo.Id.NAME,
+        include = JsonTypeInfo.As.PROPERTY,
+        property = "tipoUsuario")
+@JsonSubTypes({
+        @JsonSubTypes.Type(value = Admin.class, name = "admin"),
+        @JsonSubTypes.Type(value = Cliente.class, name = "cliente")})
 public abstract class Usuario {
     private int id;
     private String nome;
@@ -38,5 +47,14 @@ public abstract class Usuario {
 
     public void setTipoUsuario(TipoUsuario tipoUsuario) {
         this.tipoUsuario = tipoUsuario;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", tipoUsuario=" + tipoUsuario +
+                '}';
     }
 }
