@@ -1,0 +1,32 @@
+[
+      {
+    "id": 1293,
+    "nome": "TV",
+    "categorias": [
+      "ELETRONICOS",
+      "ELETRODOMESTICOS"
+    ],
+    "quantidade": 1,
+    "valor": 100.00
+  } ,
+  {
+    "id": 324,
+    "nome": "Controle Smart",
+    "categorias": [
+      "ELETRONICOS",
+      "ELETRODOMESTICOS"
+    ],
+    "quantidade": 1,
+    "valor": 50.00
+  },
+  {
+    "id": 123,
+    "nome": "MacBook",
+    "categorias": [
+      "ELETRONICOS",
+      "COMPUTADORES"
+    ],
+    "quantidade": 1,
+    "valor": 20000.00
+  }
+]

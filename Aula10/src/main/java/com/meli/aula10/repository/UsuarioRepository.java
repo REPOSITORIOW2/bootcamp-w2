@@ -35,7 +35,12 @@ public class UsuarioRepository {
         return usuarios;
     }
 
-    public List<Usuario> getUsaurios() {
+    public List<Usuario> findAll() {
         return this.getUsuarios();
+    }
+
+    public Usuario findById(int id){
+        List<Usuario> listaUsuarios = findAll();
+        return listaUsuarios.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
     }
 }
