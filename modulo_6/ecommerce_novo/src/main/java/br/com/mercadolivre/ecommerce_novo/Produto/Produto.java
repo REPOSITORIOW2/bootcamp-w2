@@ -12,6 +12,8 @@ public class Produto {
     private int quantidade;
     private List<Categorias> categorias;
 
+    public Produto(){}
+
     public Produto(Long id, String nome, BigDecimal valor, int quantidade) {
         this.id = id;
         this.nome = nome;

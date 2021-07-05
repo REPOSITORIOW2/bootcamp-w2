@@ -45,10 +45,15 @@ public class ProdutoController {
         return new ResponseEntity<>(ProdutoDTO.converte(mostraServiceProduto.execute(id)), HttpStatus.OK);
     }
 
-
     @GetMapping()
     public ResponseEntity<List<ProdutoDTO>> mostraProdutos(){
         return new ResponseEntity<>(ProdutoDTO.converte(mostraServiceProduto.execute()), HttpStatus.OK);
+    }
+
+    @GetMapping("/category/{id}")
+    // ?category=2
+    public ResponseEntity<List<ProdutoDTO>> mostraProdutosPorCategoria(@PathVariable String id){
+        return new ResponseEntity<>(ProdutoDTO.converte(mostraServiceProduto.execute(Categorias.valueOf(id))), HttpStatus.OK);
     }
 
     @PutMapping("/{id}")

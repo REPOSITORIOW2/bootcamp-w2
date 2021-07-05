@@ -28,6 +28,11 @@ public class MostraServiceProduto {
         }
     }
 
+    public List<Produto> execute(Categorias category) {
+        return produtoRepository.encontrarPorCategoria(category);
+    }
+
+
     public List<Produto> execute(){
         return ProdutoRepository.getProdutos();
     }

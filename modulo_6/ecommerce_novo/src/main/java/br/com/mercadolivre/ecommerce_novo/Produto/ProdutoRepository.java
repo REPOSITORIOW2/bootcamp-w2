@@ -4,6 +4,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 @Repository
@@ -22,6 +23,11 @@ public class ProdutoRepository {
 
     public Produto encontrarPorId(Long id) {
         return produtos.stream().filter(p -> p.getId().equals(id)).findFirst().orElse(null);
+    }
+
+    public List<Produto> encontrarPorCategoria(Categorias category) {
+
+        return produtos.stream().filter(p -> p.getCategorias().contains(category)).collect(Collectors.toList());
     }
 
     public static List<Produto> getProdutos() {
