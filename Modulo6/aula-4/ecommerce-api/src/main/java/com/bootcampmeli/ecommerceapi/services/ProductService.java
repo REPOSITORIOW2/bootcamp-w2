@@ -96,5 +96,11 @@ public class ProductService {
 
         return ProductDTO.toDTO(newProduct);
 	}
-    
+
+    public List<ProductDTO> getProductsByCategories(List<Long> categoryIds) {
+        List<Category> categories = categoryRepository.findAllById(categoryIds);
+        List<Product> products = categories.stream().flatMap(c -> c.getProducts().stream()).distinct().collect(Collectors.toList());
+
+        return products.stream().map(p -> ProductDTO.toDTO(p)).collect(Collectors.toList());
+    }
 }

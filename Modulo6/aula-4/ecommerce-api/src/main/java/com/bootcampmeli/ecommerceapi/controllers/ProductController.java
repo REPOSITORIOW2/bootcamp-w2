@@ -6,15 +6,7 @@ import com.bootcampmeli.ecommerceapi.dtos.*;
 import com.bootcampmeli.ecommerceapi.services.ProductService;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 @RestController
@@ -26,20 +18,24 @@ public class ProductController {
     public ProductController(ProductService productService){
         this.productService = productService;
     }
-    
-    @GetMapping
-    public List<ProductDTO> getProducts() {
-        return this.productService.getProducts();
-    }
 
     @GetMapping("{productId}")
-    public ProductDTO getProductById(@PathVariable Long productId) {ProductDTO productDto = null;
+    public ProductDTO getProductById(@PathVariable Long productId) {
+        ProductDTO productDto = null;
         try {
             productDto = this.productService.getProductById(productId);
         } catch (RuntimeException ex) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, ex.getMessage());
         }
         return productDto;
+    }
+
+    @GetMapping("")
+    public List<ProductDTO> getProducts(@RequestParam(required = false) List<Long> categories) {
+        if(categories != null){
+            return this.productService.getProductsByCategories(categories);
+        }
+        return this.productService.getProducts();
     }
 
     @PostMapping

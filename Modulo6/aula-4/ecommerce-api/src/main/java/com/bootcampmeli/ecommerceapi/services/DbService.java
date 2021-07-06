@@ -83,7 +83,7 @@ public class DbService {
         
         product1.setCategories(List.of(category1, category3));
         product2.setCategories(List.of(category2));
-        product1.setCategories(List.of(category2, category3));
+        product3.setCategories(List.of(category2, category3));
 
         productRepository.saveAll(List.of(product1, product2, product3));
 
