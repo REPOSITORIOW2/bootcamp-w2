@@ -2,6 +2,7 @@ package com.bootcampmeli.ecommerceapi.services;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.bootcampmeli.ecommerceapi.dtos.CreateOrderDTO;
 import com.bootcampmeli.ecommerceapi.dtos.CreateOrderItemDTO;
@@ -55,5 +56,15 @@ public class OrderService {
         
         return OrderDTO.toDTO(newOrder);
     }
-    
+
+    public List<OrderDTO> getOrders() {
+        List<Order> orders = orderRepository.findAll();
+        return orders.stream().map(o -> OrderDTO.toDTO(o)).collect(Collectors.toList());
+    }
+
+    public OrderDTO getProductById(Long orderId) {
+        Order order = orderRepository.findById(orderId).orElseThrow(() ->
+            new RuntimeException("The order with id " + orderId + " was not found."));
+        return OrderDTO.toDTO(order);
+    }
 }
