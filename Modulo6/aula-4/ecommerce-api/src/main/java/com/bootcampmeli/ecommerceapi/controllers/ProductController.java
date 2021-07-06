@@ -33,8 +33,13 @@ public class ProductController {
     }
 
     @GetMapping("{productId}")
-    public ProductDTO getProductById(@PathVariable Long productId) {
-        return this.productService.getProductById(productId);
+    public ProductDTO getProductById(@PathVariable Long productId) {ProductDTO productDto = null;
+        try {
+            productDto = this.productService.getProductById(productId);
+        } catch (RuntimeException ex) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, ex.getMessage());
+        }
+        return productDto;
     }
 
     @PostMapping
@@ -49,12 +54,6 @@ public class ProductController {
 
         return productDto;
     }
-
-    // @PutMapping
-    // @ResponseStatus(HttpStatus.OK)
-    // public ProductDTO putProduct() {
-
-    // }
 
     @DeleteMapping("{productId}")
     @ResponseStatus(HttpStatus.NO_CONTENT)

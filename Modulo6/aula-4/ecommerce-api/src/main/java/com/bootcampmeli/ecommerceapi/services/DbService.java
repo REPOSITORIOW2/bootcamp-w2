@@ -62,24 +62,32 @@ public class DbService {
         order2.setItems(List.of(orderItem3));
         order3.setItems(List.of(orderItem2, orderItem5));
 
+
         Product product1 = new Product("Vacuum Cleaner", List.of(orderItem1, orderItem2), new BigDecimal("189.9")),
-                product2 = new Product("Chocolate Candy", List.of(orderItem3, orderItem4), new BigDecimal("2.99")),            
+                product2 = new Product("Chocolate Candy", List.of(orderItem3, orderItem4), new BigDecimal("2.99")),
                 product3 = new Product("Bench Mixer", List.of(orderItem5), new BigDecimal("169.9"));
-        
+
+        productRepository.saveAll(List.of(product1, product2, product3));
+
         orderItem1.setProduct(product1);
         orderItem2.setProduct(product1);
         orderItem3.setProduct(product2);
         orderItem4.setProduct(product2);
-        orderItem5.setProduct(product3); 
-        
+        orderItem5.setProduct(product3);
+
         Category category1 = new Category("Cleaning", List.of(product1)),
                  category2 = new Category("Foods", List.of(product2, product3)),
                  category3 = new Category("Electronics", List.of(product1, product3));
+
+        categoryRepository.saveAll(List.of(category1, category2, category3));
         
         product1.setCategories(List.of(category1, category3));
         product2.setCategories(List.of(category2));
         product1.setCategories(List.of(category2, category3));
 
+        productRepository.saveAll(List.of(product1, product2, product3));
+
         userRepository.saveAll(List.of(user1, user2, user3));
+
 	}
 }

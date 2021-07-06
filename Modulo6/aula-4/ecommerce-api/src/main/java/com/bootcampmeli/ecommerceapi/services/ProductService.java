@@ -13,7 +13,6 @@ import javax.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 @Service
-@Transactional
 public class ProductService {
 
     private final IProductRepository productRepository;
@@ -52,9 +51,7 @@ public class ProductService {
         
         List<Category> categories = categoryRepository.findAllById(createProductDTO.getCategoryIds());
         Product product = new Product(createProductDTO.getName(), createProductDTO.getPrice(), categories);
-        
-        categories.forEach(x -> x.addProduct(product));
-        
+
         Product newProduct = this.productRepository.save(product);
 
         return ProductDTO.toDTO(newProduct);
@@ -82,23 +79,19 @@ public class ProductService {
                 "User with id " + updateProductDTO.getUserId() + " does not have permission to update a product."
             );
         }
-        
-        List<Category> categories = categoryRepository.findAllById(updateProductDTO.getCategoryIds());
 
         Product product = this.productRepository.findById(productId).orElseThrow(
             () -> new RuntimeException(
-                "Product with id " + productId + " does not exist."
+                    "Product with id " + productId + " does not exist."
             )
         );
-
-        product.getCategories().forEach(c -> c.removeProduct(product));
+        
+        List<Category> categories = categoryRepository.findAllById(updateProductDTO.getCategoryIds());
 
         product.setCategories(categories);
         product.setPrice(updateProductDTO.getPrice());
         product.setName(updateProductDTO.getName());
-        
-        categories.forEach(x -> x.addProduct(product));
-        
+
         Product newProduct = this.productRepository.save(product);
 
         return ProductDTO.toDTO(newProduct);
