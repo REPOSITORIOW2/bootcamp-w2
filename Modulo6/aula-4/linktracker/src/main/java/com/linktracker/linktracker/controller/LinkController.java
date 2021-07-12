@@ -11,11 +11,13 @@ import com.linktracker.linktracker.services.LinkService;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -48,15 +50,14 @@ public class LinkController {
         return this.linkService.addLink(createLinkDto);
     }
 
-    @GetMapping("/link/invalidate/{linkId}")
-    public ResponseEntity<Void> invalidateLink(@PathVariable Long linkId) {
+    @DeleteMapping("/link/invalidate/{linkId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void invalidateLink(@PathVariable Long linkId, @RequestParam(required =  false) String password) {
         try {
-            this.linkService.invalidateLink(linkId);
+            this.linkService.invalidateLink(linkId, password);
         } catch(Exception ex) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, ex.getMessage());
         }
-
-        return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
     }
 
     @GetMapping("/metrics/{linkId}")

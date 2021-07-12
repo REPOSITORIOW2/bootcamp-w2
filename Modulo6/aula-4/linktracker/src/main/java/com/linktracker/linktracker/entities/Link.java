@@ -11,6 +11,7 @@ public class Link {
         this.password = password;
         this.url = url; 
         this.id = -1L;
+        this.redirectCounter = 0L;
     }
 
     public String getUrl() {
@@ -37,3 +38,5 @@ public class Link {
         return this.password;
     }
 }
+
+/// sejam welcomidos
