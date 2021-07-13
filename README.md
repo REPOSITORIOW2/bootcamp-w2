@@ -26,6 +26,8 @@ Para evitar conflitos apenas um integrante do grupo deve subir as atividades.
 
 [Aula 4 - Tratamento de erros e prática integrativa](https://github.com/joutavm/bootcamp-commerce)
 
+#### Modulo 10 : Desenvolvimento web com Spring
+[Aula 1 - Testing automatizado com JUnit](https://github.com/joutavm/obter-diploma)
 
 
 
