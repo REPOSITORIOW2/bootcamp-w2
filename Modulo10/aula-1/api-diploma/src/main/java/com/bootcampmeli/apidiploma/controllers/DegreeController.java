@@ -25,7 +25,7 @@ public class DegreeController {
 
     @PostMapping("/analyzeNotes")
     @ResponseStatus(HttpStatus.CREATED)
-    public DegreeDTO printDegree(@RequestBody @Valid StudentDTO student) {        
-        return this.degreeService.printDegree(student);
+    public DegreeDTO analyzeNotes(@RequestBody @Valid StudentDTO student) {        
+        return this.degreeService.analyzeNotes(student);
     }
 }
