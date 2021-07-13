@@ -26,6 +26,7 @@ public class DegreeController {
     @PostMapping("/analyzeNotes")
     @ResponseStatus(HttpStatus.CREATED)
     public DegreeDTO analyzeNotes(@RequestBody @Valid StudentDTO student) {        
-        return this.degreeService.analyzeNotes(student);
+        DegreeDTO degree = this.degreeService.analyzeNotes(student);
+        return degree;
     }
 }

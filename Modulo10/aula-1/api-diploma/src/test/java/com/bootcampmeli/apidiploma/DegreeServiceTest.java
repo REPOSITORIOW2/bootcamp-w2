@@ -12,10 +12,13 @@ import com.bootcampmeli.apidiploma.services.DegreeService;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @SpringBootTest
+@ExtendWith(SpringExtension.class)
 public class DegreeServiceTest {
 
     @Autowired
@@ -37,16 +40,9 @@ public class DegreeServiceTest {
         DegreeDTO expectedDegree = new DegreeDTO(
             "Parabéns! ಠ_ಠ",
             6.0f,
-            new StudentDTO(
-                "aaaaaaaa", 
-                List.of(
-                    new SubjectGradeDTO("abc", 5.0f),
-                    new SubjectGradeDTO("def", 6.0f),
-                    new SubjectGradeDTO("ghi", 7.0f)
-                ))
-        );
+            new StudentDTO());
 
-        assertThat(degree).usingRecursiveComparison().isEqualTo(expectedDegree);
+        assertThat(degree).usingRecursiveComparison().ignoringFields("student").isEqualTo(expectedDegree);
     }
 
     @Test
@@ -90,7 +86,7 @@ public class DegreeServiceTest {
     @Test
     @DisplayName("Should write diploma when given a congratulations message, average grade and student information.")
     public void writeDiploma() {
-        
+        // given
         StudentDTO studentDto = new StudentDTO();
         String congratulationsMessage = "Parabéns! ಠ_ಠ";
         float averageGrades = 5.0f;
