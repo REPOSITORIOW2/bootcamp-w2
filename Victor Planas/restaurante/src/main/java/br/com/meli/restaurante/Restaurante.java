@@ -1,13 +1,19 @@
 package br.com.meli.restaurante;
 
+import br.com.meli.restaurante.repository.RestauranteRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class Restaurante {
     private List<Mesa> mesas;
     private int numeroDeMesas;
     private int numeroPedido;
     private double caixa;
+
 
     public Restaurante() {
         this.mesas = new ArrayList<Mesa>();

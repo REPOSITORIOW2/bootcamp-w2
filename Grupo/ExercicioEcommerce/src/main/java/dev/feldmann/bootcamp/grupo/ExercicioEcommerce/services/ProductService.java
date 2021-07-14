@@ -8,7 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import dev.feldmann.bootcamp.grupo.ExercicioEcommerce.dto.ProductDTO;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class ProductService {
@@ -48,5 +50,12 @@ public class ProductService {
         atualiza.setPrice(produto.getPrice());
         repository.save(atualiza);
         return ProductDTO.converte(atualiza);
+    }
+
+    public List<ProductDTO> listaProduto(){
+        return repository.getItems()
+                .stream()
+                .map(ProductDTO::converte)
+                .collect(Collectors.toList());
     }
 }

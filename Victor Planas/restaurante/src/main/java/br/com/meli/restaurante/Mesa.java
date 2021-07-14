@@ -1,11 +1,18 @@
 package br.com.meli.restaurante;
 
+import br.com.meli.restaurante.repository.RestauranteRepository;
+import br.com.meli.restaurante.repository.RestauranteRepositoryImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Mesa {
     private int id;
-    private List<Pedido> pedidos = new ArrayList<>();
+    private List<Pedido> pedidos;
     private double valorTotal;
 
 
@@ -35,7 +42,7 @@ public class Mesa {
         return this.valorTotal;
     }
 
-    public List<Pedido> adicionaPedido(Pedido p){
+    public List<Pedido> adicionaPedido(Pedido p) throws IOException {
         pedidos.add(p);
         return this.pedidos;
     }
@@ -47,6 +54,15 @@ public class Mesa {
 
     public List<Pedido> getPedidos() {
         return pedidos;
+    }
+
+    public boolean removePedidoByID(int id) throws IOException {
+        Optional<Pedido> atual = this.pedidos.stream().filter(pedido -> pedido.getId() == id).findFirst();
+        Pedido pedidoAtual = null;
+        if(atual.isPresent()){
+            return this.pedidos.remove(atual.get());
+        }
+        return false;
     }
 
 }

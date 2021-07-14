@@ -1,12 +1,18 @@
 package br.com.meli.restaurante;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import java.util.Date;
 import java.util.List;
 
 public class Pedido{
     private int id;
+    @JsonIgnore
     private Mesa mesa;
     private List<Prato> pratos;
     private double valorTotal;
+    private boolean ativo;
+    private Date data;
 
     public Pedido(int id, Mesa mesa, List<Prato> pratos) {
         this.id = id;
