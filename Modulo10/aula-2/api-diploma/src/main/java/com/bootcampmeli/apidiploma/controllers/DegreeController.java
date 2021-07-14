@@ -1,0 +1,27 @@
+package com.bootcampmeli.apidiploma.controllers;
+
+import com.bootcampmeli.apidiploma.dtos.DegreeDTO;
+import com.bootcampmeli.apidiploma.dtos.StudentDTO;
+import com.bootcampmeli.apidiploma.services.DegreeService;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+
+@RestController
+@RequestMapping
+public class DegreeController {
+
+    private final DegreeService degreeService;
+
+    public DegreeController(DegreeService degreeService) {
+        this.degreeService = degreeService;
+    }
+
+    @PostMapping("/analyzeNotes")
+    @ResponseStatus(HttpStatus.CREATED)
+    public DegreeDTO analyzeNotes(@RequestBody @Valid StudentDTO student) {        
+        DegreeDTO degree = this.degreeService.analyzeNotes(student);
+        return degree;
+    }
+}
