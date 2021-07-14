@@ -17,7 +17,7 @@ import javax.validation.constraints.*;
 public class Subject {
     @NotBlank(message = "subject cannot be blank")
     @Size(min = 8, max = 50)
-    @Pattern(regexp = "[a-z]")
+    @Pattern(regexp = "^[a-z]+")
     private String subject;
     @NotNull(message = "grade cannot be null")
     @Min(message = "grade must be higher than 0", value = 0)

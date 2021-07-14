@@ -1,4 +1,4 @@
-package br.com.meli.aula2spring.diploma;
+package br.com.meli.aula2spring.unit;
 
 import br.com.meli.aula2spring.diploma.dtos.StudentDTO;
 import br.com.meli.aula2spring.diploma.entities.Aluno;
@@ -72,4 +72,5 @@ public class CertificateServiceImplTest {
                 .hasFieldOrProperty("student");
         assertThat(result.getStudent()).usingRecursiveComparison().isEqualTo(alunoTest);
     }
+
 }

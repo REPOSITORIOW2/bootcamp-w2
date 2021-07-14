@@ -19,7 +19,7 @@ import java.util.List;
 public class Aluno implements Idable {
     @NotBlank(message = "Name cannot be blank")
     @Size(min = 8, max = 50)
-    @Pattern(regexp = "[a-z]")
+    @Pattern(regexp = "^[a-z]+")
     private String name;
     @Valid
     private List<Subject> subjects;
