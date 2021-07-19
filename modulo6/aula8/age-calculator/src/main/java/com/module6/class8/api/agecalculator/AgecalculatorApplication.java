@@ -28,5 +28,4 @@ public class AgecalculatorApplication {
 
         return String.valueOf(period.getYears());
     }
-
 }
