@@ -41,3 +41,44 @@ WHERE condition;
 ```
 
 ---
+
+### Segunda parte
+
+**1) Mostre o título e o nome do gênero de todas as séries**
+
+```
+SELECT s.title, g.name FROM series s JOIN genres g ON s.genre_id = g.id
+```
+
+**2) Mostre o título dos episódios, o nome e o sobrenome dos atores que atuam em cada um deles.**
+
+```
+SELECT e.title, a.first_name, a.last_name
+FROM (episodes e, actors a)
+JOIN actor_episode ae ON ae.episode_id = e.id
+AND a.id = ae.actor_id
+```
+
+**3) Mostre o título de todas as séries e o número total de temporadas que cada uma delas possui.**
+
+```
+SELECT s.title, COUNT(se.id) as total_seasons FROM (series s, seasons se)
+WHERE s.id = se.serie_id GROUP BY s.title
+```
+
+**4) Mostre o nome de todos os gêneros e o número total de filmes de cada um, desde que seja maior ou igual a 3.**
+
+```
+SELECT g.name, COUNT(m.id) as total_movies FROM (genres g, movies m)
+WHERE g.id = m.genre_id GROUP BY g.name HAVING total_movies >= 3
+```
+
+**5) Mostre apenas o nome e o sobrenome dos atores que atuam em todos os filmes de Star Wars e que estes não se repitam.**
+
+```
+SELECT DISTINCT a.first_name, a.last_name
+FROM (movies m, actors a)
+JOIN actor_movie am ON am.movie_id = m.id
+AND a.id = am.actor_id
+WHERE m.title LIKE 'La Guerra de las galaxias%'
+```
