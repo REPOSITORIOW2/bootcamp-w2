@@ -36,7 +36,9 @@ SELECT s.title, g.name FROM series s INNER JOIN genres g ON(g.id = s.genre_id);
 | Person of Interest  | Accion   |
 | The Big Bang Theory | Comedia  |
 | Breaking Bad        | Drama    |
+
 6 rows in set (0.00 sec)
+
 ## 2.Mostre o título dos episódios, o nome e o sobrenome dos atores que atuam em cada um deles.
 ``` sql 
 SELECT e.title, a.first_name, a.last_name FROM actors a INNER JOIN actor_episode ae ON (a.id=ae.actor_id) INNER JOIN episodes e ON (e.id=ae.episode_id);
@@ -51,7 +53,9 @@ SELECT e.title, a.first_name, a.last_name FROM actors a INNER JOIN actor_episode
 | The North Remembers         | Emilia   | Clarke  |
 | The North Remembers         | Peter   | Dinklage |
 | The North Remembers         | Kit    | Harington |
+
 .... 148 rows in set (0.00 sec)
+
 ## 3.Mostre o título de todas as séries e o número total de temporadas que cada uma delas possui.
 
 ``` sql 
@@ -67,6 +71,7 @@ SELECT series.title, COUNT(seasons.serie_id) AS temporadas FROM series INNER JOI
 | Person of Interest |     5 |
 | The Big Bang Theory |     10 |
 | Breaking Bad    |     5 |
+
 6 rows in set (0.00 sec)
 
 ## 4.Mostre o nome de todos os gêneros e o número total de filmes de cada um, desde que seja maior ou igual a 3.
@@ -82,6 +87,7 @@ SELECT g.name, COUNT(m.genre_id) AS n_movies FROM genres g INNER JOIN movies m O
 | Ciencia Ficcion |    5 |
 | Animacion    |    4 |
 | Aventuras    |    3 |
+
 4 rows in set (0.00 sec)
 
 ## 5.Mostre apenas o nome e o sobrenome dos atores que atuam em todos os filmes de Star Wars e que estes não se repitam.
@@ -96,4 +102,5 @@ SELECT DISTINCT a.first_name, a.last_name FROM actors a INNER JOIN actor_movie a
 | Mark    | Hamill  |
 | Harrison  | Ford   |
 | Carrie   | Fisher  |
+
 3 rows in set (0.00 sec)
