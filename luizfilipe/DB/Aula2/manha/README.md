@@ -1,6 +1,6 @@
 # Querys
 
-## Querys criada para execução em banco MySQL [movie-db](./movie-db) inicialmente disponibilizado
+## Querys criada para execução em banco MySQL [movie-db](./movie-db.sql) inicialmente disponibilizado
 
 ### QUESTAO 1
 ~~~mysql
