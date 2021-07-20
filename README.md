@@ -31,3 +31,5 @@ Para evitar conflitos apenas um integrante do grupo deve subir as atividades.
 
 #### Modulo 13 : Introdução a base da dados
 [SQL 1 - TM](https://github.com/wagnernegrao/SQL-1---TM/blob/main/README.md)
+
+[SQL 2 - TM](https://github.com/wagnernegrao/SQL-2---TM)
