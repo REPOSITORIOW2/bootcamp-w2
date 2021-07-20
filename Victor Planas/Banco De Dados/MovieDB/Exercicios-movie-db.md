@@ -1,7 +1,7 @@
 # MER
-![MER](/images/movieMER.png)
+![MER](https://github.com/REPOSITORIOW2/bootcamp-w2/blob/grupo-11/Victor%20Planas/Banco%20De%20Dados/MovieDB/images/movieMER.png)
 # DER
-![DER](/images/movieDER.png)
+![DER](https://github.com/REPOSITORIOW2/bootcamp-w2/blob/grupo-11/Victor%20Planas/Banco%20De%20Dados/MovieDB/images/movieDER.png)
 
 
 # Primeira Parte
@@ -20,11 +20,11 @@
 ### R: Ao utilizar o group by podemos inserir uma clausula HAVING para selecionar  somente uma condição presente nesse agrupamento.
 
 ## 5. Dados os diagramas a seguir, indique a qual tipo de JOIN cada um corresponde:
-![EX5](/images/ex5.png)
+![EX5](https://github.com/REPOSITORIOW2/bootcamp-w2/blob/grupo-11/Victor%20Planas/Banco%20De%20Dados/MovieDB/images/ex5.png)
 ### R:Diagrama à esquerda: Inner JOIN, Diagrama à direita: left join
 
 ## 6. Escreva uma consulta genérica para cada um dos diagramas abaixo:
-![EX6](/images/ex6.png)
+![EX6](https://github.com/REPOSITORIOW2/bootcamp-w2/blob/grupo-11/Victor%20Planas/Banco%20De%20Dados/MovieDB/images/ex6.png)
 ### Diagrama da esquerda: 
 ```mysql
 SELECT <select_line>
@@ -44,7 +44,7 @@ ON A.Id = B.Id;
 
 # SEGUNDA PARTE
 ## A segunda parte dos exercícios foi realizada para o banco de dados em MySQL.
-## É possivel encontrar o database dump [aqui](/DB/movies-db.sql)
+## É possivel encontrar o database dump [aqui](https://github.com/REPOSITORIOW2/bootcamp-w2/blob/grupo-11/Victor%20Planas/Banco%20De%20Dados/MovieDB/DB/movies-db.sql)
 
 ## 1. Mostre o título e o nome do gênero de todas as séries.
 ```mysql
