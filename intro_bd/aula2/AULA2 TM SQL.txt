@@ -1,0 +1,25 @@
+1.O que é chamado de JOIN em um banco de dados?
+Permite fazer uma consulta cruzando os dados de duas tabelas ou mais.
+
+2. Nomeie e explique 2 tipos de JOIN.
+INNER JOIN - Retorna uma interseção entre duas tabelas ou mais.
+LEFT JOIN - Retorna a interseção e os dados da primeira tabela da consulta.
+
+3. Para que é usado o GROUP BY?
+Agrupa dados de uma coluna específica.
+
+4. Para que é usado o HAVING?
+Determina uma condição de busca ao usar o GROUP BY.
+
+5. Dados os diagramas a seguir, indique a qual tipo de JOIN cada um corresponde:
+1- INNER JOIN
+2- LEFT JOIN
+
+6. Escreva uma consulta genérica para cada um dos diagramas abaixo:
+1-	SELECT * FROM TABELA1
+	RIGHT JOIN TABELA2
+	ON  TABELA1.ID = TABELA2.ID
+
+2-	SELECT * FROM TABELA1
+	JOIN TABELA2
+	ON TABELA1.ID = TABELA2.ID
