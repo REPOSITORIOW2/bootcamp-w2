@@ -15,10 +15,10 @@ A cláusula GROUP BY identifica as colunas de agrupamento para a consulta. Pode 
 A cláusula HAVING é semelhante a cláusula WHERE, a diferença é que ela é aplicada somente a grupos como um todo (ou seja, as linhas do conjunto de resultados que representam grupos), verificando as condições informadas após a agregação. 
 
 ## 5.  Dados os diagramas a seguir, indique a qual tipo de JOIN cada um corresponde:
-**FIGURA 1 - INNER JOIN**
+**FIGURA 1 - INNER JOIN** <br/>
 ![INNER JOIN](https://javatutorial.net/wp-content/uploads/2018/02/sql-inner-join.png)
 
-**FIGURA 2 - LEFT JOIN**
+**FIGURA 2 - LEFT JOIN** <br/>
 ![LEFT JOIN](https://javatutorial.net/wp-content/uploads/2018/02/sql-left-join.png)
 
 ## 6. Escreva uma consulta genérica para cada um dos diagramas abaixo:
