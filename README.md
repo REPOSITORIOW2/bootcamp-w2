@@ -37,3 +37,5 @@ Para evitar conflitos apenas um integrante do grupo deve subir as atividades.
 ### Modulo 14: Implementação de base da dados
 
 [Aula 1](https://github.com/wagnernegrao/Implementa-o-de-base-da-dados)
+
+[Aula 3 - HQL](https://github.com/mogmeli/dentinhos-desafio)
