@@ -1,11 +1,9 @@
 package com.bootcamp.demo.repository;
 
-import com.bootcamp.demo.model.Turn;
+import com.bootcamp.demo.model.Diary;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
 @Repository
-public interface TurnRepository extends JpaRepository<Turn,Long> {
+public interface DiaryRepository extends JpaRepository<Diary,Long> {
 }
