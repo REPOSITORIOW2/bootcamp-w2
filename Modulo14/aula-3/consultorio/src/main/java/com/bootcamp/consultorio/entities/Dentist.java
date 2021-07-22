@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Dentist {
     
@@ -25,6 +27,7 @@ public class Dentist {
     private String code_mp;
 
     @OneToMany(mappedBy = "dentist")
+    @JsonIgnore
     private List<Diary> diaries = new ArrayList<>();
 
 
@@ -121,5 +124,13 @@ public class Dentist {
 
     public void setCode_mp(String code_mp) {
         this.code_mp = code_mp;
+    }
+
+    public List<Diary> getDiaries() {
+        return this.diaries;
+    }
+
+    public void setDiaries(List<Diary> diaries) {
+        this.diaries = diaries;
     }
 }

@@ -3,6 +3,7 @@ package com.bootcamp.consultorio.entities;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -17,11 +18,14 @@ import com.bootcamp.consultorio.enums.TurnStatusEnum;
 public class TurnStatus {
     
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
     @Enumerated(EnumType.STRING)
+    @Column(name = "name")
     private TurnStatusEnum name;
 
+    @Column(name = "description")
     private String description;
 
     @OneToMany(mappedBy = "turnStatus")
@@ -67,7 +71,7 @@ public class TurnStatus {
         return this.turns;
     }
 
-    public void setDescription(List<Turn> turns) {
+    public void setTurns(List<Turn> turns) {
         this.turns = turns;
     }
 }

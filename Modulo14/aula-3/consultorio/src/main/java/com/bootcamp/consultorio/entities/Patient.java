@@ -4,7 +4,13 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Patient {
@@ -20,6 +26,7 @@ public class Patient {
     private String email;
 
     @OneToMany(mappedBy = "patient")
+    @JsonIgnore
     private List<Turn> turns = new ArrayList<>();
 
 
@@ -106,6 +113,14 @@ public class Patient {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public List<Turn> getTurns() {
+        return this.turns;
+    }
+
+    public void setTurns(List<Turn> turns) {
+        this.turns = turns;
     }
     
 }

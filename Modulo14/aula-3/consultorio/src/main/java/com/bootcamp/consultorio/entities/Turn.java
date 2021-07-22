@@ -2,6 +2,7 @@ package com.bootcamp.consultorio.entities;
 
 import java.time.LocalDate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,23 +10,31 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Turn {
     
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
+
+    @Column(name = "day", columnDefinition = "DATE")
     private LocalDate day;
 
     @ManyToOne
-    @JoinColumn
+    @JoinColumn(name = "diary_id")
+    @JsonIgnore
     private Diary diary;
 
     @ManyToOne
-    @JoinColumn
+    @JoinColumn(name = "turn_status_id")
+    @JsonIgnore
     private TurnStatus turnStatus;
 
     @ManyToOne
-    @JoinColumn
+    @JoinColumn(name = "patient_id")
+    @JsonIgnore
     private Patient patient;
 
 

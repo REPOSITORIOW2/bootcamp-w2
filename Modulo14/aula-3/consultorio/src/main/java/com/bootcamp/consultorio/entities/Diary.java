@@ -3,21 +3,37 @@ package com.bootcamp.consultorio.entities;
 import java.time.LocalTime;
 import java.util.List;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Diary {
     
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
+
+    @Column(name = "start_time")
     private LocalTime start_time;
+
+    @Column(name = "ending_time")
     private LocalTime ending_time;
 
     @ManyToOne
-    @JoinColumn
+    @JoinColumn(name = "dentist_id")
+    @JsonIgnore
     private Dentist dentist;
 
     @OneToMany(mappedBy = "diary")
+    @JsonIgnore
     private List<Turn> turns;
 
 
@@ -63,5 +79,13 @@ public class Diary {
 
     public void setDentist(Dentist dentist) {
         this.dentist = dentist;
+    }
+
+    public List<Turn> getTurns() {
+        return this.turns;
+    }
+
+    public void setTurns(List<Turn> turns) {
+        this.turns = turns;
     }
 }
