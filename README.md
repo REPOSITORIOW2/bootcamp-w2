@@ -39,3 +39,5 @@ Para evitar conflitos apenas um integrante do grupo deve subir as atividades.
 [Aula 1](https://github.com/wagnernegrao/Implementa-o-de-base-da-dados)
 
 [Aula 3 - HQL](https://github.com/mogmeli/dentinhos-desafio)
+
+[Aula 3 - Mongo DB](https://github.com/LarissaGMalagoli/paozinho)
