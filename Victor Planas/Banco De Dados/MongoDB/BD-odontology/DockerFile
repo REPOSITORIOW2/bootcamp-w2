@@ -1,0 +1,2 @@
+FROM mongo:4.0
+docker run -p 27017:27017 --env MONGO_INITDB_ROOT_PASSWORD=root --env MONGO_INITDB_ROOT_USERNAME=root --env MONGO_INITDB_DATABASE=ml_app_consultorio mongo:4.0
