@@ -42,6 +42,6 @@ Neste cenário, é garantido uma taxa de erro <0.5% e um tempo de resposta <500m
 
 ## Exercício 2
 
-Solução: Implementar uma estratégia de exponential backoff.
+Solução: Implementar uma estratégia de exponential backoff. Desta maneira, progressivamente aumentamos o tempo de espera entre os envios de requisições para o microsserviço. Desta forma, o servidor não receberá mais Status Code 429 após esperar uma quantidade maior de tempo entre requisições. Caso o microsserviço ainda demore demasiadamente para responder, devolvemos o Status Code 504 (Gateway Timeout).
 
 https://blog.hubspot.com/website/http-error-429
